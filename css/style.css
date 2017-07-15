@@ -1,0 +1,178 @@
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Regular.eot');
+	src: local('Raleway'), local('Raleway-Regular'),
+		url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Regular.woff2') format('woff2'),
+		url('../fonts/Raleway-Regular.woff') format('woff'),
+		url('../fonts/Raleway-Regular.ttf') format('truetype'),
+		url('../fonts/Raleway-Regular.svg#Raleway-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', Helvetica, sans-serif;
+  width: 100%;
+}
+
+.main_width {
+  margin: 0 auto;
+  width: 1350px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+#headermenu {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 45px;
+  padding: 10px 80px 0 80px ;
+  box-sizing: border-box;
+}
+
+#logo {
+  float: left;
+}
+
+.greenword {
+  color: rgb(38, 200, 168);
+}
+
+#mainmenu {
+  list-style-type: none;
+  float:right;
+  height: 20px;
+}
+
+li {
+  display: inline-block;
+  padding-left: 50px;
+}
+
+#slider {
+  background-color: lightgrey;
+  height: 550px;
+  background-image: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%);
+  border: 1px solid red;
+}
+
+#arrowleft {
+  color: rgb(38, 200, 168);
+  font-size: 60px;
+  float: left;
+  height: 80px;
+  border: 1px solid red;
+  position: absolute;
+  margin: 180px 0;
+}
+
+#image {
+  width: 600px;
+  height: 500px;
+  background-image: url("../images/black_chair.png");
+  background-size: cover;
+  border: 1px solid red;
+  position: relative;
+  float: left;
+  margin: 50px 0 0 72px;
+  box-sizing: border-box;
+}
+
+#sliderdescription {
+  width: 600px;
+  height: 500px;
+  position: relative;
+  text-align: center;
+  float: right;
+  border: 1px solid red;
+  box-sizing: border-box;
+  margin: 50px 72px 0 0;
+}
+
+#sliderdescriptionbox {
+  width: 500px;
+  height: 500px;
+  border: 1px solid red;
+  position: relative;
+}
+
+.button {
+  background-color: rgb(38, 200, 168);
+  border-radius: 10px;
+  width: 300px;
+  height: 60px;
+  color: white;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 27px;
+  box-sizing: border-box;
+  position: absolute;
+  margin: 310px 0 0 78px;
+  padding: 14px 0 0 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  word-spacing: 4px;
+  position: absolute;
+  margin: 80px 0 0 30px;
+}
+
+#arrowright {
+  color: rgb(38, 200, 168);
+  font-size: 60px;
+  height: 80px;
+  border: 1px solid red;
+  position: absolute;
+  float: right;
+  margin: 180px 0 0 565px;
+}
+
+#slidertext {
+  line-height: 25px;
+  border: 1px solid red;
+  position: absolute;
+  height: 110px;
+  width: 450px;
+  text-align: center;
+  margin: 170px 0;
+}
+
+#productbox1 {
+  background-image: url("../images/box1_img.jpg");
+  height: 260px;
+  width: 380px;
+  background-size: cover;
+}
+
+#productbox2 {
+  background-image: url("../images/box2_img.jpg");
+  height: 260px;
+  width: 380px;
+  background-size: cover;
+}
+
+#textbox {
+  height: 260px;
+  width: 380px;
+  color: grey;
+  line-height: 25px;
+}
+
+#firstp {
+  margin-bottom: 20px;
+}
+
+h4 {
+  border-bottom: 5px solid rgb(38, 200, 168);
+}
