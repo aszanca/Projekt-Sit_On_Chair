@@ -44,7 +44,7 @@ body {
 }
 
 .greenword {
-  color: rgb(38, 200, 168);
+  color: #01CEAF;
 }
 
 #mainmenu {
@@ -66,7 +66,7 @@ li {
 }
 
 #arrowleft {
-  color: rgb(38, 200, 168);
+  color: #01CEAF;
   font-size: 60px;
   float: left;
   height: 80px;
@@ -106,7 +106,7 @@ li {
 }
 
 .button {
-  background-color: rgb(38, 200, 168);
+  background-color: #01CEAF;
   border-radius: 10px;
   width: 300px;
   height: 60px;
@@ -129,7 +129,7 @@ h2 {
 }
 
 #arrowright {
-  color: rgb(38, 200, 168);
+  color: #01CEAF;
   font-size: 60px;
   height: 80px;
   border: 1px solid red;
@@ -159,7 +159,7 @@ h2 {
   width: 380px;
   background-size: cover;
   float: left;
-  margin: 30px 30px 150px 75px;
+  margin: 30px 30px 50px 75px;
 }
 
 #productbox2 {
@@ -168,17 +168,24 @@ h2 {
   width: 380px;
   background-size: cover;
   float: left;
-  margin: 30px 0 150px 0;
+  margin: 30px 0 50px 0;
 }
 
 #textbox {
-  height: 300px;
+  height: 290px;
   width: 375px;
   border: 1px solid lightgrey;
-  margin: 30px 75px 150px 0;
+  margin: 30px 75px 50px 0;
   float: right;
   padding: 5px 20px;
   box-sizing: border-box;
+}
+
+#textbox_name {
+  border-bottom: 8px solid #01CEAF;
+  width: 160px;
+  padding: 25px 0 0 0;
+  position: absolute;
 }
 
 #firstp {
@@ -201,10 +208,11 @@ h2 {
 }
 
 .productname {
-  border-bottom: 8px solid rgb(38, 200, 168);
+  border-bottom: 8px solid #01CEAF;
   width: 160px;
   padding: 20px 0 0 0;
   position: absolute;
+  margin: 0 0 0 15px;
 }
 
 .uppercase {
@@ -219,6 +227,171 @@ h2 {
   margin: 175px 0 0 0;
 }
 
-#pricing {
-  clear: both;
+#pricing_container {
+  height: 800px;
+  background-color: #F2F2F2;
+  border: 1px solid red;
+}
+
+
+h3 {
+  font-size: 24px;
+  border-bottom: 8px solid #01CEAF;
+  width: 350px;
+  padding: 50px 0 8px 0;
+  margin: 0 0 40px 65px;
+  box-sizing: border-box;
+  color: dimgray;
+}
+
+.plan_name {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.outer_circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #C2C2C2;
+  border-radius: 100px;
+  position: absolute;
+  top: -45px;
+  left: 155px;
+  background-color: white;
+
+}
+
+.inner_circle {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #C2C2C2;
+  border-radius: 100px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #C2C2C2;
+}
+
+.pricing_box {
+  float: left;
+  position: relative;
+  border: 3px solid #C2C2C2;
+  width: 377px;
+  height: 540px;
+  text-align: center;
+  margin: 30px 17px 30px 17px;
+  background-color: #F9F9F9;
+  box-sizing: border-box;
+}
+
+#pricing_box_container {
+  width: 1347px;
+  height: 600px;
+  border: 1px solid red;
+  padding: 20px 55px 0 55px;
+  box-sizing: border-box;
+}
+
+#join_button3 {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 140px;
+  height: 35px;
+  font-size: 18px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin: 25px 0 12px 112px;
+}
+
+#join_button1 {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 140px;
+  height: 35px;
+  font-size: 18px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin: 110px 0 12px 112px;
+  position: absolute;
+}
+
+#join_button2 {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 140px;
+  height: 35px;
+  font-size: 18px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin: 60px 0 12px 112px;
+  position: absolute;
+}
+
+.plan_name {
+  text-transform: uppercase;
+  color: #01CEAF;
+  font-size: 26px;
+  margin: 0 0 30px 0;
+}
+
+.price_circle {
+  font-weight: 800;
+  font-size: 42px;
+  letter-spacing: 1px;
+  color: #C2C2C2;
+  border-radius: 100px;
+  width: 140px;
+  height: 140px;
+  background-color: white;
+  border: 3px solid #C2C2C2;
+  padding: 28px 0 0 0;
+  box-sizing: border-box;
+  margin: auto;
+  font-stretch: ultra-condensed;
+}
+
+.uppercase_for_price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #C2C2C2;
+  text-transform: uppercase;
+  padding: 6px 0 0 0;
+}
+
+.font_size_for_sup {
+  font-size: 16px;
+}
+
+.table {
+  font-size: 27px;
+  margin: 30px 0 15px 0;
+}
+
+.dark_row {
+  height: 50px;
+  background-color: #E4E4E4;
+  text-align: center;
+  color: #989898;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.light_row {
+  height: 50px;
+  background-color: #F1F1F1;
+  text-align: center;
+  color: #747474;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.pricing_box:hover {
+  border: 3px solid #01CEAF;
+  background-color: #01CEAF;
 }
