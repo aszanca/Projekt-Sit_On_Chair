@@ -124,15 +124,7 @@
 	font-weight: 800;
 	font-style: italic;
 }
-
-
-$colors: (
-	mainColor: #27c7ab,
-	pricingBackground: #f9f9f9,
-	lightFontColor: #c2c2c2,
-	darkFontColor: #787878,
-
-);
+$colors: ( mainColor: #27c7ab, pricingBackground: #f9f9f9, lightFontColor: #c2c2c2, darkFontColor: #787878, );
 
 * {
 	padding: 0;
@@ -150,7 +142,6 @@ body {
 
 	.main_width {
 		margin: 0 auto;
-		border: 1px solid red;
 		width: 100vw;
 
 		.green_word {
@@ -218,7 +209,7 @@ body {
 				display: none;
 				margin-top: 4vh;
 				margin-left: -25px;
-				padding: 2vh 2.5vw 2vh;
+				padding: 2vh 2.5vw;
 				font-size: 1rem;
 				list-style-type: none;
 				line-height: 1.625rem;
@@ -247,20 +238,20 @@ body {
 }
 // Main header END
 
+
 // Slider START
 .slider {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	background-image: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%);
-	border: 1px solid red;
 	padding: 5vw;
 
 	.slider_arrow {
 		color: map-get($colors, mainColor);
 		font-size: 3.75rem;
 		height: 5rem;
-		border: 1px solid red;
+		padding-bottom: 25vh;
 	}
 
 	.slider_content {
@@ -273,7 +264,6 @@ body {
 		.slider_image {
 			width: 75vw;
 			height: 30vh;
-			border: 1px solid red;
 
 			img {
 				position: absolute;
@@ -320,7 +310,6 @@ body {
 	}
 }
 // Slider END
-
 // Product boxes START
 .product_boxes {
 	display: flex;
@@ -337,95 +326,127 @@ body {
 		display: flex;
 		align-items: flex-end;
 	}
-		.product_box1 {
+
+	.product_box1 {
 		background-image: url("../../images/box1_img.jpg");
-		}
+	}
 
-		.product_box2 {
+	.product_box2 {
 		background-image: url("../../images/box2_img.jpg");
+	}
+
+	.product_name_box {
+		width: 100%;
+		height: 8vh;
+		padding: 2.5vh 0 0 3.5vw;
+		background-color: rgba(255, 255, 255, 0.5);
+		display: flex;
+		align-content: center;
+		margin: 0 0 2vh;
+	}
+
+	.product_name_box1 {
+		&::after {
+			content: "Chair CLAIR";
+			font-weight: bold;
+			font-size: 1rem;
+			width: 40vw;
+			height: 3vh;
+			border-bottom: 0.4rem solid map-get($colors, mainColor);
 		}
-		.product_name_box {
-			width: 100%;
-			height: 8vh;
-			padding: 2.5vh 0 0 3.5vw;
-			background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.product_name_box2 {
+		&::after {
+			content: "Chair MARGARITA";
+			font-weight: bold;
+			font-size: 1rem;
+			width: 40vw;
+			height: 3vh;
+			border-bottom: 0.4rem solid map-get($colors, mainColor);
+		}
+	}
+
+	.text_box {
+		height: 35vh;
+		width: 78vw;
+		margin: 2.5vh;
+		display: flex;
+		flex-direction: column;
+		border: 0.065rem solid lightgrey;
+
+		.text_box_title {
+			width: 40vw;
+			height: 3vh;
+			padding: 1vh 0 3vh;
+			margin: 2vh;
+			border-bottom: 0.4rem solid map-get($colors, mainColor);
+		}
+
+		p {
+			font-size: 0.85rem;
+			color: map-get($colors, darkFontColor);
+			padding: 1vh 4vw 2vh;
+		}
+	}
+}
+// Product boxes END
+
+
+// Pricing boxes START
+
+	h3 {
+	  font-size: 1.5rem;
+	  border-bottom: 0.4rem solid map-get($colors, mainColor);
+	  width: 70vw;
+	  padding: 5vh 0 2vh 0;
+	  margin: 0 0 2vh 15vw;
+	  color: map-get($colors, darkFontColor);
+		font-weight: 300;
+	}
+
+	.pricing_boxes_container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+	.pricing_box {
+		display: flex;
+		justify-content: center;
+		width: 78vw;
+		margin: 2.5vh;
+		border: 0.065rem solid lightgrey;
+
+		.outer_circle {
 			display: flex;
-			align-content: center;
-			margin: 0 0 2vh 0;
-		}
+			justify-content: center;
+			align-items: center;
+			width: 60px;
+		  height: 60px;
+		  border: 0.065rem solid lightgrey;
+		  border-radius: 100px;
+		  position: absolute;
+		  background-color: white;
+			margin-bottom: 50px;
 
-		.product_name_box1 {
-
-			&::after {
-				content: "Chair CLAIR";
-				font-weight: bold;
-				font-size: 1rem;
-				width: 40vw;
-				height: 3vh;
-				border-bottom: 0.4rem solid map-get($colors, mainColor);
-				}
+			.inner_circle {
+				width: 28px;
+			  height: 28px;
+			  border: 0.065rem solid lightgrey;
+			  border-radius: 100px;
+			  background-color: map-get($colors, lightFontColor);
 			}
+			.pricing_box_with_border {
 
-				.product_name_box2 {
-
-					&::after {
-						content: "Chair MARGARITA";
-						font-weight: bold;
-						font-size: 1rem;
-						width: 40vw;
-						height: 3vh;
-						border-bottom: 0.4rem solid map-get($colors, mainColor);
-						}
-			}
-			.text_box {
-				height: 35vh;
 				width: 78vw;
-				margin: 2.5vh;
-				display: flex;
-				flex-direction: column;
-				border: 0.065rem solid lightgrey;
-
-				.text_box_title {
-					width: 40vw;
-					height: 3vh;
-					padding: 1vh 0 3vh 0;
-					margin: 2vh;
-					border-bottom: 0.4rem solid map-get($colors, mainColor);
-					}
-
-					p {
-					font-size: 0.85rem;
-					color: map-get($colors, darkFontColor);
-					padding: 1vh 4vw 2vh 4vw;
-					}
-				}
+				margin: 7vh 2.5vh 2.5vh 2.5vh;
 			}
-
-
-
-#firstp {
-  position: absolute;
-  color: grey;
-  height: 230px;
-  width: 320px;
-  padding: 67px 0 0 0;
-  font-size: 15px;
-  line-height: 25px;
+		}
+	}
 }
-
-#secondp {
-  width: 320px;
-  height: 50px;
-  padding: 190px 0 0 0;
-  font-size: 15px;
-  color: grey;
-  line-height: 25px;
-}
-
-
 
 /*
-
 #pricing_container {
   height: 800px;
   background-color: #F2F2F2;
@@ -433,16 +454,7 @@ body {
 }
 
 
-h3 {
-  font-size: 24px;
-  border-bottom: 8px solid #01CEAF;
-  width: 350px;
-  padding: 50px 0 8px 0;
-  margin: 0 0 10px 65px;
-  box-sizing: border-box;
-  color: dimgray;
 
-}
 
 .plan_name {
   font-size: 20px;
@@ -450,26 +462,12 @@ h3 {
 }
 
 .outer_circle {
-  width: 60px;
-  height: 60px;
-  border: 3px solid #C2C2C2;
-  border-radius: 100px;
-  position: absolute;
-  top: -45px;
-  left: 155px;
-  background-color: white;
+
 
 }
 
 .inner_circle {
-  width: 26px;
-  height: 26px;
-  border: 3px solid #C2C2C2;
-  border-radius: 100px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #C2C2C2;
+
 }
 
 .pricing_box {
@@ -597,6 +595,8 @@ h3 {
   background-color: #01CEAF;
 }
 
+
+/*
 #contactform_left_column {
 	border: 1px solid red;
 	display: inline-block;
