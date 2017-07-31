@@ -1,0 +1,708 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Medium.eot');
+	src: local('Raleway Medium'), local('Raleway-Medium'), url('../../fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Medium.woff2') format('woff2'), url('../../fonts/Raleway-Medium.woff') format('woff'), url('../../fonts/Raleway-Medium.ttf') format('truetype'), url('../../fonts/Raleway-Medium.svg#Raleway-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Thin.eot');
+	src: local('Raleway Thin'), local('Raleway-Thin'), url('../../fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Thin.woff2') format('woff2'), url('../../fonts/Raleway-Thin.woff') format('woff'), url('../../fonts/Raleway-Thin.ttf') format('truetype'), url('../../fonts/Raleway-Thin.svg#Raleway-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-BlackItalic.eot');
+	src: local('Raleway Black Italic'), local('Raleway-BlackItalic'), url('../../fonts/Raleway-BlackItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-BlackItalic.woff2') format('woff2'), url('../../fonts/Raleway-BlackItalic.woff') format('woff'), url('../../fonts/Raleway-BlackItalic.ttf') format('truetype'), url('../../fonts/Raleway-BlackItalic.svg#Raleway-BlackItalic') format('svg');
+	font-weight: 900;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-BoldItalic.eot');
+	src: local('Raleway Bold Italic'), local('Raleway-BoldItalic'), url('../../fonts/Raleway-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-BoldItalic.woff2') format('woff2'), url('../../fonts/Raleway-BoldItalic.woff') format('woff'), url('../../fonts/Raleway-BoldItalic.ttf') format('truetype'), url('../../fonts/Raleway-BoldItalic.svg#Raleway-BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-ExtraLightItalic.eot');
+	src: local('Raleway ExtraLight Italic'), local('Raleway-ExtraLightItalic'), url('../../fonts/Raleway-ExtraLightItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-ExtraLightItalic.woff2') format('woff2'), url('../../fonts/Raleway-ExtraLightItalic.woff') format('woff'), url('../../fonts/Raleway-ExtraLightItalic.ttf') format('truetype'), url('../../fonts/Raleway-ExtraLightItalic.svg#Raleway-ExtraLightItalic') format('svg');
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Black.eot');
+	src: local('Raleway Black'), local('Raleway-Black'), url('../../fonts/Raleway-Black.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Black.woff2') format('woff2'), url('../../fonts/Raleway-Black.woff') format('woff'), url('../../fonts/Raleway-Black.ttf') format('truetype'), url('../../fonts/Raleway-Black.svg#Raleway-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Light.eot');
+	src: local('Raleway Light'), local('Raleway-Light'), url('../../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Light.woff2') format('woff2'), url('../../fonts/Raleway-Light.woff') format('woff'), url('../../fonts/Raleway-Light.ttf') format('truetype'), url('../../fonts/Raleway-Light.svg#Raleway-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-LightItalic.eot');
+	src: local('Raleway Light Italic'), local('Raleway-LightItalic'), url('../../fonts/Raleway-LightItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-LightItalic.woff2') format('woff2'), url('../../fonts/Raleway-LightItalic.woff') format('woff'), url('../../fonts/Raleway-LightItalic.ttf') format('truetype'), url('../../fonts/Raleway-LightItalic.svg#Raleway-LightItalic') format('svg');
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-ExtraLight.eot');
+	src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url('../../fonts/Raleway-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-ExtraLight.woff2') format('woff2'), url('../../fonts/Raleway-ExtraLight.woff') format('woff'), url('../../fonts/Raleway-ExtraLight.ttf') format('truetype'), url('../../fonts/Raleway-ExtraLight.svg#Raleway-ExtraLight') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-SemiBold.eot');
+	src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url('../../fonts/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-SemiBold.woff2') format('woff2'), url('../../fonts/Raleway-SemiBold.woff') format('woff'), url('../../fonts/Raleway-SemiBold.ttf') format('truetype'), url('../../fonts/Raleway-SemiBold.svg#Raleway-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Italic.eot');
+	src: local('Raleway Italic'), local('Raleway-Italic'), url('../../fonts/Raleway-Italic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Italic.woff2') format('woff2'), url('../../fonts/Raleway-Italic.woff') format('woff'), url('../../fonts/Raleway-Italic.ttf') format('truetype'), url('../../fonts/Raleway-Italic.svg#Raleway-Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-ExtraBold.eot');
+	src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url('../../fonts/Raleway-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-ExtraBold.woff2') format('woff2'), url('../../fonts/Raleway-ExtraBold.woff') format('woff'), url('../../fonts/Raleway-ExtraBold.ttf') format('truetype'), url('../../fonts/Raleway-ExtraBold.svg#Raleway-ExtraBold') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-MediumItalic.eot');
+	src: local('Raleway Medium Italic'), local('Raleway-MediumItalic'), url('../../fonts/Raleway-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-MediumItalic.woff2') format('woff2'), url('../../fonts/Raleway-MediumItalic.woff') format('woff'), url('../../fonts/Raleway-MediumItalic.ttf') format('truetype'), url('../../fonts/Raleway-MediumItalic.svg#Raleway-MediumItalic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-SemiBoldItalic.eot');
+	src: local('Raleway SemiBold Italic'), local('Raleway-SemiBoldItalic'), url('../../fonts/Raleway-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-SemiBoldItalic.woff2') format('woff2'), url('../../fonts/Raleway-SemiBoldItalic.woff') format('woff'), url('../../fonts/Raleway-SemiBoldItalic.ttf') format('truetype'), url('../../fonts/Raleway-SemiBoldItalic.svg#Raleway-SemiBoldItalic') format('svg');
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Regular.eot');
+	src: local('Raleway'), local('Raleway-Regular'), url('../../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Regular.woff2') format('woff2'), url('../../fonts/Raleway-Regular.woff') format('woff'), url('../../fonts/Raleway-Regular.ttf') format('truetype'), url('../../fonts/Raleway-Regular.svg#Raleway-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-Bold.eot');
+	src: local('Raleway Bold'), local('Raleway-Bold'), url('../../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-Bold.woff2') format('woff2'), url('../../fonts/Raleway-Bold.woff') format('woff'), url('../../fonts/Raleway-Bold.ttf') format('truetype'), url('../../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-ThinItalic.eot');
+	src: local('Raleway Thin Italic'), local('Raleway-ThinItalic'), url('../../fonts/Raleway-ThinItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-ThinItalic.woff2') format('woff2'), url('../../fonts/Raleway-ThinItalic.woff') format('woff'), url('../../fonts/Raleway-ThinItalic.ttf') format('truetype'), url('../../fonts/Raleway-ThinItalic.svg#Raleway-ThinItalic') format('svg');
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../../fonts/Raleway-ExtraBoldItalic.eot');
+	src: local('Raleway ExtraBold Italic'), local('Raleway-ExtraBoldItalic'), url('../../fonts/Raleway-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'), url('../../fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'), url('../../fonts/Raleway-ExtraBoldItalic.woff') format('woff'), url('../../fonts/Raleway-ExtraBoldItalic.ttf') format('truetype'), url('../../fonts/Raleway-ExtraBoldItalic.svg#Raleway-ExtraBoldItalic') format('svg');
+	font-weight: 800;
+	font-style: italic;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	font-family: 'Raleway', Helvetica, sans-serif;
+
+	.main_width {
+		margin: 0 auto;
+		border: 1px solid red;
+		width: 100vw;
+
+		.green_word {
+			color: #01CEAF;
+			font-weight: 600;
+		}
+	}
+}
+// Main header START
+
+.header {
+	background-color: black;
+	width: 100vw;
+	color: white;
+	font-size: 14px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.logo {
+		margin-left: 20px;
+	}
+
+	.main_menu {
+		list-style-type: none;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		margin-right: 20px;
+		padding: 0;
+
+		> li {
+			padding: 5px;
+			position: relative;
+
+			&:hover {
+				.dropdown_menu {
+					display: flex;
+				}
+			}
+
+			a {
+				display: block;
+				padding: 5px, 10px;
+				text-decoration-line: none;
+
+				&:link {
+					color: white;
+				}
+
+				&:visited {
+					color: white;
+				}
+
+				&:active {
+					color: white;
+				}
+			}
+
+			.dropdown_menu {
+				flex-direction: column;
+				background-color: #000;
+				position: absolute;
+				display: none;
+				margin-top: 27px;
+				margin-left: -25px;
+				padding: 14px 14px 10px;
+				font-size: 16px;
+				list-style-type: none;
+				line-height: 26px;
+				font-weight: 100;
+
+				&:before {
+					content: "";
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-color: transparent transparent #000 transparent;
+					border-width: 0 9px 11px 9px;
+					border-style: solid;
+					top: -15px;
+					left: 50%;
+					margin-left: -10px;
+					margin-top: 5px;
+				}
+
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+}
+// Main header END
+
+// Slider START
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-image: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%);
+	border: 1px solid red;
+	padding: 5vw;
+
+	.slider_arrow {
+		color: #01CEAF;
+		font-size: 3.75rem;
+		height: 5rem;
+		border: 1px solid red;
+	}
+
+	.slider_content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.slider_image {
+			width: 75vw;
+			height: 30vh;
+			border: 1px solid red;
+
+			img {
+				position: absolute;
+			}
+		}
+
+		.slider_description_box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h2 {
+				text-transform: uppercase;
+				font-size: 25px;
+				word-spacing: 2px;
+			}
+
+			.slider_text {
+				text-align: center;
+				line-height: 1.2rem;
+				font-size: 0.85rem;
+				margin: 3vw;
+			}
+
+			.slider_button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.button {
+					background-color: #01CEAF;
+					border-radius: 0.8rem;
+					width: 55vw;
+					height: 8vh;
+					color: white;
+					text-transform: uppercase;
+					font-size: 1.3rem;
+					font-family: Raleway, Helvetica, sans-serif;
+					font-weight: 300;
+					border-style: none;
+				}
+			}
+		}
+	}
+}
+// Slider END
+
+// Product boxes START
+
+.product_box {
+
+  height: 30vh;
+  width: 80vw;
+  margin: 5vw;
+}
+
+#productbox2 {
+
+  height: 265px;
+  width: 380px;
+  background-size: cover;
+  float: left;
+  margin: 30px 0 50px 0;
+}
+
+#textbox {
+  height: 290px;
+  width: 375px;
+  border: 1px solid lightgrey;
+  margin: 30px 75px 50px 0;
+  float: right;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+#textbox_name {
+  border-bottom: 8px solid #01CEAF;
+  width: 160px;
+  padding: 25px 0 0 0;
+  position: absolute;
+}
+
+#firstp {
+  position: absolute;
+  color: grey;
+  height: 230px;
+  width: 320px;
+  padding: 67px 0 0 0;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+#secondp {
+  width: 320px;
+  height: 50px;
+  padding: 190px 0 0 0;
+  font-size: 15px;
+  color: grey;
+  line-height: 25px;
+}
+
+.productname {
+  border-bottom: 8px solid #01CEAF;
+  width: 160px;
+  padding: 20px 0 0 0;
+  position: absolute;
+  margin: 0 0 0 15px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.transparentbox {
+  width: 380px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  margin: 175px 0 0 0;
+}
+
+
+
+
+/*
+
+#pricing_container {
+  height: 800px;
+  background-color: #F2F2F2;
+  border: 1px solid red;
+}
+
+
+h3 {
+  font-size: 24px;
+  border-bottom: 8px solid #01CEAF;
+  width: 350px;
+  padding: 50px 0 8px 0;
+  margin: 0 0 10px 65px;
+  box-sizing: border-box;
+  color: dimgray;
+
+}
+
+.plan_name {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.outer_circle {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #C2C2C2;
+  border-radius: 100px;
+  position: absolute;
+  top: -45px;
+  left: 155px;
+  background-color: white;
+
+}
+
+.inner_circle {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #C2C2C2;
+  border-radius: 100px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #C2C2C2;
+}
+
+.pricing_box {
+  float: left;
+  position: relative;
+  border: 3px solid #C2C2C2;
+  width: 377px;
+  height: 540px;
+  text-align: center;
+  margin: 30px 17px 30px 17px;
+  background-color: #F9F9F9;
+  box-sizing: border-box;
+}
+
+#pricing_box_container {
+  width: 1347px;
+  height: 600px;
+  border: 1px solid red;
+  padding: 20px 55px 0 55px;
+  box-sizing: border-box;
+		margin: 40px 0 0 0;
+}
+
+#join_button3 {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 140px;
+  height: 35px;
+  font-size: 18px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin: 25px 0 12px 112px;
+}
+
+#join_button1 {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 140px;
+  height: 35px;
+  font-size: 18px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin: 110px 0 12px 112px;
+  position: absolute;
+}
+
+#join_button2 {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 140px;
+  height: 35px;
+  font-size: 18px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin: 60px 0 12px 112px;
+  position: absolute;
+}
+
+.plan_name {
+  text-transform: uppercase;
+  color: #01CEAF;
+  font-size: 26px;
+  margin: 0 0 30px 0;
+}
+
+.price_circle {
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: 1px;
+  color: #C2C2C2;
+  border-radius: 100px;
+  width: 140px;
+  height: 140px;
+  background-color: white;
+  border: 3px solid #C2C2C2;
+  padding: 28px 0 0 0;
+  box-sizing: border-box;
+  margin: auto;
+  font-stretch: ultra-condensed;
+}
+
+.uppercase_for_price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #C2C2C2;
+  text-transform: uppercase;
+  padding: 6px 0 0 0;
+}
+
+.font_size_for_sup {
+  font-size: 16px;
+}
+
+.table {
+  font-size: 27px;
+  margin: 30px 0 15px 0;
+}
+
+.dark_row {
+  height: 50px;
+  background-color: #E4E4E4;
+  text-align: center;
+  color: #989898;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.light_row {
+  height: 50px;
+  background-color: #F1F1F1;
+  text-align: center;
+  color: #747474;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+.pricing_box:hover {
+  border: 3px solid #01CEAF;
+  background-color: #01CEAF;
+}
+
+#contactform_left_column {
+	border: 1px solid red;
+	display: inline-block;
+	padding: 7px 65px;
+	box-sizing: border-box;
+	width: 800px;
+	margin: 40px 0 0 0
+
+}
+
+.input_block {
+	display: block;
+}
+
+.form_name_email {
+	width: 720px;
+	height: 77px;
+	border: 1px solid #01CEAF;
+	margin: 0 0 30px 0;
+	box-sizing: border-box;
+	font-size: 38px;
+	padding: 0 0 0 15px;
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-weight: 100;
+	color: #989898;
+}
+
+#form_message {
+	width: 719px;
+	height: 210px;
+	border: 1px solid #01CEAF;
+	box-sizing: border-box;
+	margin: 0 0 30px 0;
+	font-size: 38px;
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-weight: 100;
+	color: #989898;
+	padding: 15px 0 0 15px;
+}
+
+#contactform_right_column {
+	width: 545px;
+	height: 510px;
+	float: right;
+	border: 1px solid red;
+
+}
+
+#contactform_right_column_image {
+	width: 330px;
+	margin: 15px 0 10px 90px;
+	display: block;
+}
+
+.dwcheckbox{
+    display:none
+}
+.dwcheckbox + label{
+    width: 60px;
+    height: 55px;
+    background: url("../../images/form_ok2.png") 0px 0px;
+    display: block;
+    cursor: pointer;
+		border: 1px solid #01CEAF;
+}
+
+.dwcheckbox:checked + label{
+    background-position: 0px -62px;
+}
+
+.dwcheckbox + label:hover,.dwcheckbox:checked + label:hover{
+    opacity: 0.8;
+}
+
+.agree_checkbox {
+	width: 370px;
+	height: 80px;
+	margin: 20px 100px 0 100px;
+	border: 1px solid red;
+
+}
+
+#checkbox_label {
+
+			position: absolute;
+			margin: 0 0 200px 0;
+			z-index: 1;
+
+}
+
+#checkbox_text {
+	font-size: 20px;
+			color: #989898;
+			font-weight: 100;
+			position: relative;
+			padding: 0 0 0 75px;
+			z-index: 2;
+			float: right;
+	}
+
+#send_button {
+  background-color: #01CEAF;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 10px;
+  width: 350px;
+  height: 70px;
+  font-size: 32px;
+  box-sizing: border-box;
+	margin: 0 0 0 100px;
+	font-family: 'Raleway', helvetica, sans-serif;
+	font-weight: bold;
+
+}
+
+#footer_container {
+	margin: 50px 0 100px 0;
+	border: 1px solid red;
+}
+
+#copy {
+	float: left;
+	color: #989898;
+	font-size: 16px;
+	padding: 15px 0 0 65px;
+	letter-spacing: 2.5px;
+}
+
+#icons {
+	float:right;
+}
+
+.footer_logo {
+	color: #989898;
+	font-size: 22px;
+	word-spacing: 4px;
+	float: right;
+	margin: 10px 85px 0 70px;
+}
+*/
+//dropdown menu musi być w position: absolute, a pierwsze li z naszego menu powinno mieć pozycję relatywną
+//dropdown ma domyślnie display: none
+//hoverem łapiemy całą pozycję menu bo są zagnieżdżone w sobie - pseudoklasa hover dla li
+//trójkącik dla całego ula dodajemy pseudoelementem before
