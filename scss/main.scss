@@ -125,16 +125,25 @@
 	font-style: italic;
 }
 
+
+$colors: (
+	mainColor: #27c7ab,
+	pricingBackground: #f9f9f9,
+	lightFontColor: #c2c2c2,
+	darkFontColor: #787878,
+
+);
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-}
+};
 
 img {
 	width: 100%;
 	height: auto;
-}
+};
 
 body {
 	font-family: 'Raleway', Helvetica, sans-serif;
@@ -145,7 +154,7 @@ body {
 		width: 100vw;
 
 		.green_word {
-			color: #01CEAF;
+			color: map-get($colors, mainColor);
 			font-weight: 600;
 		}
 	}
@@ -156,26 +165,26 @@ body {
 	background-color: black;
 	width: 100vw;
 	color: white;
-	font-size: 14px;
-	height: 45px;
+	font-size: 0.875rem;
+	height: 6vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	.logo {
-		margin-left: 20px;
+		margin-left: 3vh;
 	}
 
 	.main_menu {
 		list-style-type: none;
-		height: 20px;
+		height: 3vh;
 		display: flex;
 		align-items: center;
-		margin-right: 20px;
+		margin-right: 3vh;
 		padding: 0;
 
 		> li {
-			padding: 5px;
+			padding: 0.7vh;
 			position: relative;
 
 			&:hover {
@@ -186,7 +195,7 @@ body {
 
 			a {
 				display: block;
-				padding: 5px, 10px;
+				padding: 1vh, 2vw;
 				text-decoration-line: none;
 
 				&:link {
@@ -207,12 +216,12 @@ body {
 				background-color: #000;
 				position: absolute;
 				display: none;
-				margin-top: 27px;
+				margin-top: 4vh;
 				margin-left: -25px;
-				padding: 14px 14px 10px;
-				font-size: 16px;
+				padding: 2vh 2.5vw 2vh;
+				font-size: 1rem;
 				list-style-type: none;
-				line-height: 26px;
+				line-height: 1.625rem;
 				font-weight: 100;
 
 				&:before {
@@ -221,12 +230,12 @@ body {
 					width: 0;
 					height: 0;
 					border-color: transparent transparent #000 transparent;
-					border-width: 0 9px 11px 9px;
+					border-width: 0 2.5vw 3vw 2.5vw;
 					border-style: solid;
-					top: -15px;
+					top: -2.3vh;
 					left: 50%;
-					margin-left: -10px;
-					margin-top: 5px;
+					margin-left: -2vw;
+					margin-top: 1vh;
 				}
 
 				a {
@@ -248,7 +257,7 @@ body {
 	padding: 5vw;
 
 	.slider_arrow {
-		color: #01CEAF;
+		color: map-get($colors, mainColor);
 		font-size: 3.75rem;
 		height: 5rem;
 		border: 1px solid red;
@@ -278,8 +287,8 @@ body {
 
 			h2 {
 				text-transform: uppercase;
-				font-size: 25px;
-				word-spacing: 2px;
+				font-size: 1.5625rem;
+				word-spacing: 1.125rem;
 			}
 
 			.slider_text {
@@ -295,7 +304,7 @@ body {
 				align-items: center;
 
 				.button {
-					background-color: #01CEAF;
+					background-color: map-get($colors, mainColor);
 					border-radius: 0.8rem;
 					width: 55vw;
 					height: 8vh;
@@ -313,39 +322,86 @@ body {
 // Slider END
 
 // Product boxes START
+.product_boxes {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-.product_box {
+	.product_box {
+		height: 30vh;
+		width: 78vw;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: 2.5vh;
+		display: flex;
+		align-items: flex-end;
+	}
+		.product_box1 {
+		background-image: url("../../images/box1_img.jpg");
+		}
 
-  height: 30vh;
-  width: 80vw;
-  margin: 5vw;
-}
+		.product_box2 {
+		background-image: url("../../images/box2_img.jpg");
+		}
+		.product_name_box {
+			width: 100%;
+			height: 8vh;
+			padding: 2.5vh 0 0 3.5vw;
+			background-color: rgba(255, 255, 255, 0.5);
+			display: flex;
+			align-content: center;
+			margin: 0 0 2vh 0;
+		}
 
-#productbox2 {
+		.product_name_box1 {
 
-  height: 265px;
-  width: 380px;
-  background-size: cover;
-  float: left;
-  margin: 30px 0 50px 0;
-}
+			&::after {
+				content: "Chair CLAIR";
+				font-weight: bold;
+				font-size: 1rem;
+				width: 40vw;
+				height: 3vh;
+				border-bottom: 0.4rem solid map-get($colors, mainColor);
+				}
+			}
 
-#textbox {
-  height: 290px;
-  width: 375px;
-  border: 1px solid lightgrey;
-  margin: 30px 75px 50px 0;
-  float: right;
-  padding: 5px 20px;
-  box-sizing: border-box;
-}
+				.product_name_box2 {
 
-#textbox_name {
-  border-bottom: 8px solid #01CEAF;
-  width: 160px;
-  padding: 25px 0 0 0;
-  position: absolute;
-}
+					&::after {
+						content: "Chair MARGARITA";
+						font-weight: bold;
+						font-size: 1rem;
+						width: 40vw;
+						height: 3vh;
+						border-bottom: 0.4rem solid map-get($colors, mainColor);
+						}
+			}
+			.text_box {
+				height: 35vh;
+				width: 78vw;
+				margin: 2.5vh;
+				display: flex;
+				flex-direction: column;
+				border: 0.065rem solid lightgrey;
+
+				.text_box_title {
+					width: 40vw;
+					height: 3vh;
+					padding: 1vh 0 3vh 0;
+					margin: 2vh;
+					border-bottom: 0.4rem solid map-get($colors, mainColor);
+					}
+
+					p {
+					font-size: 0.85rem;
+					color: map-get($colors, darkFontColor);
+					padding: 1vh 4vw 2vh 4vw;
+					}
+				}
+			}
+
+
 
 #firstp {
   position: absolute;
@@ -365,27 +421,6 @@ body {
   color: grey;
   line-height: 25px;
 }
-
-.productname {
-  border-bottom: 8px solid #01CEAF;
-  width: 160px;
-  padding: 20px 0 0 0;
-  position: absolute;
-  margin: 0 0 0 15px;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.transparentbox {
-  width: 380px;
-  height: 70px;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  margin: 175px 0 0 0;
-}
-
 
 
 
