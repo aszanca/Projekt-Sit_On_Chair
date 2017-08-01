@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Projekt-Sit_on_Chair</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='assets/css/main.css' rel='stylesheet' />
 </head>
-
 <body>
 
 
@@ -39,7 +37,6 @@
     </header>
   </div>
 
-
   <div class="main_width">
     <section class="slider">
       <div class="slider_arrow">
@@ -65,7 +62,6 @@
     </section>
   </div>
 
-
   <div class="main_width">
     <section class="product_boxes">
       <div class="product_box product_box1">
@@ -90,7 +86,6 @@
       </div>
     </section>
   </div>
-
 
   <div class="main_width">
     <section class="pricing_boxes">
@@ -119,7 +114,7 @@
               </div>
             </div>
             <div class="join_button_box">
-            <button type="button" class="join_button">
+              <button type="button" class="join_button">
               DOŁĄCZ
             </button>
             </div>
@@ -151,7 +146,7 @@
               </div>
             </div>
             <div class="join_button_box">
-            <button type="button" class="join_button">
+              <button type="button" class="join_button">
               DOŁĄCZ
             </button>
             </div>
@@ -186,65 +181,59 @@
               </div>
             </div>
             <div class="join_button_box">
-            <button type="button" class="join_button">
+              <button type="button" class="join_button">
               DOŁĄCZ
             </button>
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
   </div>
 
-
-  <!--
-  <section id="contactform">
-    <div class="main_width">
-      <div id="contactform_container">
-        <h3 class="uppercase">Kontakt</h3>
+  <div class="main_width">
+    <section class="contact_form">
+      <div class="contact_form_container">
+        <h3>KONTAKT</h3>
         <form>
-          <div id="contactform_left_column">
-            <input class="input_block form_name_email" type="text" name="firstname" placeholder="Imię">
-            <input class="input_block form_name_email" type="email" name="email" placeholder="email">
-            <textarea id="form_message" class="input_block" placeholder="Wiadomość"></textarea>
+          <input class="input" type="text" name="first_name" placeholder="Imię">
+          <input class="input" type="email" name="email" placeholder="email">
+          <textarea class="textarea input" placeholder="Wiadomość"></textarea>
+          <img src="images/red_chair.png">
+          <div class="agree_checkbox_container">
+            <span class="checkbox_text"> Zgadzam się na przetwarzanie danych osobowych
+            </span>
+            <input type="checkbox" id="agree_checkbox" class="dwcheckbox" checked/>
+            <label for="agree_checkbox"></label>
           </div>
-          <div id="contactform_right_column">
-            <img id="contactform_right_column_image" src="images/red_chair.png">
-            <div class="agree_checkbox">
-              <p id="checkbox_text">
-                Zgadzam się na przetwarzanie danych osobowych</p>
-              <input type="checkbox" id="check1" class="dwcheckbox" checked/>
-              <label for="check1"></label>
-
-            </div>
-            <input id="send_button" type="submit" value="Wyślij">
-          </div>
+          <button class="submit_button" type="submit">Wyślij</button>
         </form>
       </div>
-    </div>
-  </section>
-  <footer>
-    <div class="main_width">
-      <div id="footer_container">
-        <div id="copy">
+    </section>
+  </div>
+
+  <div class="main_width">
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_logos">
+          <div class="footer_logo">
+            SIT <b> ON </b> CHAIR
+          </div>
+          <div class="icons">
+            <img src="images/flickr.png">
+            <img src="images/vimeo.png">
+            <img src="images/pinterest.png">
+            <img src="images/twitter.png">
+          </div>
+        </div>
+        <div class="copy_text">
           Copyright 2014 | All rights reserved. - Sit On Chair
         </div>
-        <div id="icons">
-          <img src="images/flickr.png">
-          <img src="images/vimeo.png">
-          <img src="images/pinterest.png">
-          <img src="images/twitter.png">
-          <p class="uppercase footer_logo">
-            Sit <b>On</b> Chair
-          </p>
-        </div>
       </div>
-  </footer>
-  -->
+    </footer>
+  </div>
+
 
 </body>
 <script src="js/app.js" type="text/javascript"></script>
-
 </html>
