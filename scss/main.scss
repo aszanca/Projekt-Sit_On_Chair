@@ -124,7 +124,7 @@
 	font-weight: 800;
 	font-style: italic;
 }
-$colors: ( mainColor: #27c7ab, pricingBackground: #f9f9f9, lightFontColor: #c2c2c2, darkFontColor: #787878, );
+$colors: ( mainColor: #27c7ab, pricingBackground: #F2F2F2, lightFontColor: #c2c2c2, darkFontColor: #787878, pricingFeaturesDarkBackground: #E4E4E4, pricingFeaturesLightBackground: #F1F1F1 );
 
 * {
 	padding: 0;
@@ -237,8 +237,6 @@ body {
 	}
 }
 // Main header END
-
-
 // Slider START
 .slider {
 	display: flex;
@@ -293,7 +291,7 @@ body {
 				justify-content: center;
 				align-items: center;
 
-				.button {
+				.more_button {
 					background-color: map-get($colors, mainColor);
 					border-radius: 0.8rem;
 					width: 55vw;
@@ -311,11 +309,13 @@ body {
 }
 // Slider END
 // Product boxes START
+
 .product_boxes {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 1vh;
 
 	.product_box {
 		height: 30vh;
@@ -394,206 +394,160 @@ body {
 
 
 // Pricing boxes START
+h3 {
+	font-size: 1.5rem;
+	border-bottom: 0.4rem solid map-get($colors, mainColor);
+	width: 70vw;
+	padding: 5vh 0 2vh;
+	margin: 0 0 2vh 3vw;
+	color: map-get($colors, darkFontColor);
+	font-weight: 300;
+}
 
-	h3 {
-	  font-size: 1.5rem;
-	  border-bottom: 0.4rem solid map-get($colors, mainColor);
-	  width: 70vw;
-	  padding: 5vh 0 2vh 0;
-	  margin: 0 0 2vh 15vw;
-	  color: map-get($colors, darkFontColor);
-		font-weight: 300;
-	}
+.pricing_boxes_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 3vh;
 
-	.pricing_boxes_container {
+	background-color: map-get($colors, pricingBackground);
+
+	.pricing_box_container {
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+		align-items: flex-start;
 
-	.pricing_box {
-		display: flex;
-		justify-content: center;
-		width: 78vw;
-		margin: 2.5vh;
-		border: 0.065rem solid lightgrey;
+		width: 90vw;
+		height: 65vh;
+		margin: 1.25vh 0;
 
 		.outer_circle {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			width: 60px;
-		  height: 60px;
-		  border: 0.065rem solid lightgrey;
-		  border-radius: 100px;
-		  position: absolute;
-		  background-color: white;
+			height: 60px;
+			border: 0.065rem solid lightgrey;
+			border-radius: 100px;
+			position: absolute;
+			background-color: white;
 			margin-bottom: 50px;
 
 			.inner_circle {
 				width: 28px;
-			  height: 28px;
-			  border: 0.065rem solid lightgrey;
-			  border-radius: 100px;
-			  background-color: map-get($colors, lightFontColor);
+				height: 28px;
+				border: 0.065rem solid lightgrey;
+				border-radius: 100px;
+				background-color: map-get($colors, lightFontColor);
 			}
-			.pricing_box_with_border {
+		}
 
-				width: 78vw;
-				margin: 7vh 2.5vh 2.5vh 2.5vh;
+		.pricing_box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			width: 78vw;
+			height: 60vh;
+			margin: 6vh 2.5vh 2.5vh;
+			border: 0.065rem solid lightgrey;
+			background-color: white;
+
+			.plan_name {
+				font-size: 1.25rem;
+				padding-top: 4vh;
+				color: map-get($colors, mainColor);
+				font-weight: 400;
+				font-stretch: ultra-condensed;
+			}
+
+			.price_circle {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+
+				font-weight: 500;
+				font-size: 2.5rem;
+				letter-spacing: 0.06rem;
+				color: map-get($colors, lightFontColor);
+				border-radius: 100px;
+				width: 100px;
+				height: 100px;
+				background-color: white;
+				border: 0.065rem solid lightgrey;
+				font-stretch: ultra-condensed;
+				margin: 2vh 0;
+				font-size: 2rem;
+
+				.price_sup {
+					font-size: 0.8rem;
+				}
+
+				.currency {
+					font-size: 0.8rem;
+					font-stretch: ultra-condensed;
+					margin-top: 1vh;
+				}
+			}
+
+			.features_list {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+				font-size: 1.2rem;
+				font-weight: 100;
+				color: map-get($colors, darkFontColor);
+
+				.dark_row {
+					display: flex;
+					justify-content: center;
+
+					background-color: map-get($colors, pricingFeaturesDarkBackground);
+					padding: 1.2vh;
+					width: 77.5vw;
+				}
+
+				.light_row {
+					display: flex;
+					justify-content: center;
+
+					background-color: map-get($colors, pricingFeaturesLightBackground);
+					padding: 1.2vh;
+					width: 77.5vw;
+				}
+			}
+
+			.join_button_box {
+				display: flex;
+				flex-grow: 2;
+
+				.join_button {
+					display: flex;
+					align-self: flex-end;
+					align-items: center;
+					justify-content: center;
+
+					background-color: map-get($colors, mainColor);
+					color: white;
+					width: 30vw;
+					height: 5vh;
+					margin: 2.5vh;
+					text-transform: uppercase;
+					border-radius: 0.55rem;
+					font-family: Raleway, Helvetica, sans-serif;
+					font-weight: 100;
+					border-style: none;
+					font-size: 1rem;
+				}
 			}
 		}
 	}
 }
-
-/*
-#pricing_container {
-  height: 800px;
-  background-color: #F2F2F2;
-  border: 1px solid red;
-}
-
-
-
-
-.plan_name {
-  font-size: 20px;
-  padding-top: 30px;
-}
-
-.outer_circle {
-
-
-}
-
-.inner_circle {
-
-}
-
-.pricing_box {
-  float: left;
-  position: relative;
-  border: 3px solid #C2C2C2;
-  width: 377px;
-  height: 540px;
-  text-align: center;
-  margin: 30px 17px 30px 17px;
-  background-color: #F9F9F9;
-  box-sizing: border-box;
-}
-
-#pricing_box_container {
-  width: 1347px;
-  height: 600px;
-  border: 1px solid red;
-  padding: 20px 55px 0 55px;
-  box-sizing: border-box;
-		margin: 40px 0 0 0;
-}
-
-#join_button3 {
-  background-color: #01CEAF;
-  text-transform: uppercase;
-  color: white;
-  border-radius: 10px;
-  width: 140px;
-  height: 35px;
-  font-size: 18px;
-  padding: 7px 0;
-  box-sizing: border-box;
-  margin: 25px 0 12px 112px;
-}
-
-#join_button1 {
-  background-color: #01CEAF;
-  text-transform: uppercase;
-  color: white;
-  border-radius: 10px;
-  width: 140px;
-  height: 35px;
-  font-size: 18px;
-  padding: 7px 0;
-  box-sizing: border-box;
-  margin: 110px 0 12px 112px;
-  position: absolute;
-}
-
-#join_button2 {
-  background-color: #01CEAF;
-  text-transform: uppercase;
-  color: white;
-  border-radius: 10px;
-  width: 140px;
-  height: 35px;
-  font-size: 18px;
-  padding: 7px 0;
-  box-sizing: border-box;
-  margin: 60px 0 12px 112px;
-  position: absolute;
-}
-
-.plan_name {
-  text-transform: uppercase;
-  color: #01CEAF;
-  font-size: 26px;
-  margin: 0 0 30px 0;
-}
-
-.price_circle {
-  font-weight: 500;
-  font-size: 42px;
-  letter-spacing: 1px;
-  color: #C2C2C2;
-  border-radius: 100px;
-  width: 140px;
-  height: 140px;
-  background-color: white;
-  border: 3px solid #C2C2C2;
-  padding: 28px 0 0 0;
-  box-sizing: border-box;
-  margin: auto;
-  font-stretch: ultra-condensed;
-}
-
-.uppercase_for_price {
-  font-weight: bold;
-  font-size: 16px;
-  color: #C2C2C2;
-  text-transform: uppercase;
-  padding: 6px 0 0 0;
-}
-
-.font_size_for_sup {
-  font-size: 16px;
-}
-
-.table {
-  font-size: 27px;
-  margin: 30px 0 15px 0;
-}
-
-.dark_row {
-  height: 50px;
-  background-color: #E4E4E4;
-  text-align: center;
-  color: #989898;
-  padding: 7px;
-  box-sizing: border-box;
-}
-
-.light_row {
-  height: 50px;
-  background-color: #F1F1F1;
-  text-align: center;
-  color: #747474;
-  padding: 7px;
-  box-sizing: border-box;
-}
-
-.pricing_box:hover {
-  border: 3px solid #01CEAF;
-  background-color: #01CEAF;
-}
+// Pricing boxes END
 
 
 /*
