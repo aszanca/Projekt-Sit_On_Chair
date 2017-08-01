@@ -130,32 +130,7 @@ $colors: ( mainColor: #27c7ab, pricingBackground: #F2F2F2, lightFontColor: #c2c2
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-};
-
-img {
-	width: 100%;
-	height: auto;
-};
-
-h3 {
-	font-size: 1.5rem;
-	border-bottom: 0.4rem solid map-get($colors, mainColor);
-	width: 270px;
-	padding: 5vh 0 2vh;
-	margin: 0 3vw 2vh;
-	color: map-get($colors, darkFontColor);
-	font-weight: 300;
-};
-
-button {
-	background-color: map-get($colors, mainColor);
-	border-radius: 0.8rem;
-	color: white;
-	text-transform: uppercase;
-	font-family: Raleway, Helvetica, sans-serif;
-	font-weight: 300;
-	border-style: none;
-};
+}
 
 body {
 	font-family: 'Raleway', Helvetica, sans-serif;
@@ -169,13 +144,37 @@ body {
 			font-weight: 600;
 		}
 	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		border-bottom: 0.4rem solid map-get($colors, mainColor);
+		width: 270px;
+		padding: 5vh 0 2vh;
+		margin: 0 3vw 2vh;
+		color: map-get($colors, darkFontColor);
+		font-weight: 300;
+	}
+
+	button {
+		background-color: map-get($colors, mainColor);
+		border-radius: 0.8rem;
+		color: white;
+		text-transform: uppercase;
+		font-family: Raleway, Helvetica, sans-serif;
+		font-weight: 300;
+		border-style: none;
+	}
 }
 // Main header START
 .header {
 	background-color: black;
 	width: 100vw;
 	color: white;
-	font-size: 0.875rem;
+	font-size: 0.8rem;
 	height: 6vh;
 	display: flex;
 	align-items: center;
@@ -255,6 +254,22 @@ body {
 		}
 	}
 }
+
+@media (min-width: 568px) and (max-width: 768px) {
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+
+}
+
+
+
 // Main header END
 // Slider START
 .slider {
@@ -277,6 +292,10 @@ body {
 		justify-content: center;
 		align-items: center;
 		position: relative;
+
+		@media (min-width: 1025px) {
+				flex-direction: row;
+		}
 
 		.slider_image {
 			width: 72vw;
@@ -301,6 +320,7 @@ body {
 				text-transform: uppercase;
 				font-size: 1.5625rem;
 				word-spacing: 0.4rem;
+				text-align: center;
 			}
 
 			.slider_text {
@@ -324,6 +344,8 @@ body {
 		}
 	}
 }
+
+
 // Slider END
 // Product boxes START
 .product_boxes {
@@ -331,7 +353,11 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 1vh;
+	padding: 2vh 0;
+
+	@media (min-width: 1025px) {
+			flex-direction: row;
+	}
 
 	.product_box {
 		height: 30vh;
@@ -384,7 +410,7 @@ body {
 	}
 
 	.text_box {
-		height: 35vh;
+		height: 40vh;
 		width: 78vw;
 		margin: 2.5vh;
 		display: flex;
@@ -406,6 +432,9 @@ body {
 		}
 	}
 }
+
+
+
 // Product boxes END
 // Pricing boxes START
 .pricing_boxes_container {
@@ -421,7 +450,7 @@ body {
 		justify-content: center;
 		align-items: flex-start;
 		width: 90vw;
-		height: 65vh;
+		height: 69vh;
 		margin: 1.25vh 0;
 
 		.outer_circle {
@@ -450,7 +479,7 @@ body {
 			flex-direction: column;
 			align-items: center;
 			width: 78vw;
-			height: 60vh;
+			height: 65vh;
 			margin: 6vh 2.5vh 2.5vh;
 			border: 0.065rem solid lightgrey;
 			background-color: white;
@@ -473,8 +502,8 @@ body {
 				letter-spacing: 0.06rem;
 				color: map-get($colors, lightFontColor);
 				border-radius: 100px;
-				width: 100px;
-				height: 100px;
+				width: 105px;
+				height: 105px;
 				background-color: white;
 				border: 0.065rem solid lightgrey;
 				font-stretch: ultra-condensed;
@@ -535,9 +564,156 @@ body {
 			}
 		}
 	}
+
+	@media (min-width: 568px) and (max-width: 768px) {
+
+	}
+
+
+	@media (min-width: 769px) and (max-width: 1024px) {
+
+	}
+
+	@media (min-width: 1025px) {
+
+	}
+
+
+// Pricing box - hover START
+.pricing_box_hover {
+	.pricing_box_container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		width: 90vw;
+		height: 69vh;
+		margin: 1.25vh 0;
+
+		.outer_circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 60px;
+			height: 60px;
+			border: 0.065rem solid map-get($colors, mainColor);
+			background-color: map-get($colors, mainColor);
+			border-radius: 100px;
+			position: absolute;
+			margin-bottom: 50px;
+
+			.inner_circle {
+				width: 28px;
+				height: 28px;
+				border: 0.065rem solid map-get($colors, mainColor);
+				border-radius: 100px;
+				background-color: white;
+			}
+		}
+
+		.pricing_box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 78vw;
+			height: 65vh;
+			margin: 6vh 2.5vh 2.5vh;
+			border: 0.065rem solid map-get($colors, mainColor);
+			background-color: map-get($colors, mainColor);;
+
+			.plan_name {
+				font-size: 1.25rem;
+				padding-top: 4vh;
+				color: white;
+				font-weight: 400;
+				font-stretch: ultra-condensed;
+			}
+
+			.price_circle {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				font-weight: 500;
+				font-size: 2.5rem;
+				letter-spacing: 0.06rem;
+				color: map-get($colors, mainColor);
+				border-radius: 100px;
+				width: 105px;
+				height: 105px;
+				background-color: white;
+				border: 0.065rem solid map-get($colors, mainColor);;
+				font-stretch: ultra-condensed;
+				margin: 2vh 0;
+				font-size: 2rem;
+
+				.price_sup {
+					font-size: 0.8rem;
+
+				}
+
+				.currency {
+					font-size: 0.8rem;
+					font-stretch: ultra-condensed;
+					margin-top: 1vh;
+				}
+			}
+
+			.features_list {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				font-size: 1.2rem;
+				font-weight: 100;
+				color: map-get($colors, darkFontColor);
+
+				.dark_row {
+					display: flex;
+					justify-content: center;
+					background-color: map-get($colors, pricingFeaturesLightBackground);
+					padding: 1.2vh;
+					width: 77.5vw;
+				}
+
+				.light_row {
+					display: flex;
+					justify-content: center;
+					background-color: map-get($colors, pricingFeaturesDarkBackground);
+					padding: 1.2vh;
+					width: 77.5vw;
+				}
+			}
+
+			.join_button_box {
+				display: flex;
+				flex-grow: 2;
+
+				.join_button {
+					display: flex;
+					align-self: flex-end;
+					align-items: center;
+					justify-content: center;
+					width: 30vw;
+					height: 5vh;
+					margin: 2.5vh;
+					border-radius: 0.55rem;
+					font-size: 1rem;
+					background-color: white;
+					color: map-get($colors, mainColor);
+				}
+			}
+		}
+	}
+}
+//Pricing box - hover END
+
 }
 // Pricing boxes END
 // Contactform START
+
+::placeholder {
+	color: map-get($colors, lightFontColor);
+}
+
 .contact_form_container {
 	display: flex;
 	align-items: center;
@@ -570,6 +746,8 @@ body {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			resize: none;
+
 		}
 
 		img {
@@ -624,6 +802,21 @@ body {
 		}
 	}
 }
+
+@media (min-width: 568px) and (max-width: 768px) {
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+
+}
+
+
 // Contactform END
 
 // Footer START
@@ -664,4 +857,19 @@ body {
 		}
 	}
 }
+
+@media (min-width: 568px) and (max-width: 768px) {
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+
+}
+
+
 // Footer END
