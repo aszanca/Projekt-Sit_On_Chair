@@ -182,6 +182,12 @@ body {
 
 	.logo {
 		margin-left: 3vh;
+
+		@media (min-width: 769px) {
+			margin-left: 11vh;
+		}
+
+
 	}
 
 	.main_menu {
@@ -191,6 +197,10 @@ body {
 		align-items: center;
 		margin-right: 3vh;
 		padding: 0;
+
+		@media (min-width: 769px) {
+			margin-right: 11vh;
+		}
 
 		> li {
 			padding: 0.7vh;
@@ -410,14 +420,14 @@ body {
 				align-items: center;
 
 				.more_button {
-					width: 55vw;
-					height: 8vh;
-					font-size: 1.3rem;
+					width: 190px;
+					height: 40px;
+					font-size: 1.1rem;
 
 					@media (min-width: 769px) and (max-width: 1024px) {
 						width: 21vw;
 						height: 5vh;
-						font-size: 1.1rem;
+
 					}
 
 					@media (min-width: 1025px) {
@@ -443,6 +453,7 @@ body {
 
 	@media (min-width: 1025px) {
 		flex-direction: row;
+		align-items: flex-start;
 	}
 
 .product_boxes_for_rwd {
@@ -459,6 +470,7 @@ body {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+
 	}
 
 	.product_box {
@@ -467,29 +479,23 @@ body {
 		background-repeat: no-repeat;
 		background-size: contain;
 		margin: 2.5vh;
+
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 
 
-		@media (min-width: 448px) and (max-width: 768px) {
-			width: 310px;
-			height: 210px;
 
-		}
 
-		@media (min-width: 769px) and (max-width: 1024px) {
-			display: flex;
-			align-items: center;
+
+
+		@media (min-width: 448px) {
+			width: 295px;
+			height: 203px;
+			align-items: flex-end;
 			justify-content: center;
-			width: 350px;
+			margin: 1vh ;
 		}
 
-		@media (min-width: 1025px) {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 350px;
-		}
 	}
 
 	.product_box1 {
@@ -503,12 +509,12 @@ body {
 
 	.product_name_box {
 		width: 100%;
-		height: 8vh;
+		height: 28%;
 		padding: 2.5vh 0 0 3.5vw;
 		background-color: rgba(255, 255, 255, 0.5);
 		display: flex;
-		align-content: center;
-		margin: 0 0 2vh;
+
+		margin: 0 0 4%;
 	}
 
 	.product_name_box1 {
@@ -535,25 +541,38 @@ body {
 }
 
 	.text_box {
-		height: 40vh;
+
 		width: 78vw;
 		margin: 2.5vh;
 		display: flex;
 		flex-direction: column;
 		border: 0.065rem solid lightgrey;
 
+		padding: 0 2vh 0 2vh;
+
+		@media (min-width: 1025px) {
+			width: 330px;
+			height: 220px;
+			align-items: flex-start;
+			align-content: flex-start;
+			justify-content: flex-start;
+			margin: 1vh 5vh 1vh 1vh;
+		}
+
 		.text_box_title {
 			width: 140px;
 			height: 3vh;
-			padding: 1vh 0 3vh;
-			margin: 2vh;
+			padding: 2vh 0 3vh;
+			margin: 3vh 0 2vh 2vh 0;
 			border-bottom: 0.4rem solid map-get($colors, mainColor);
+
 		}
 
 		p {
 			font-size: 0.85rem;
 			color: map-get($colors, darkFontColor);
-			padding: 1vh 4vw 2vh;
+			padding: 1vh 0 2vh 0;
+
 		}
 	}
 }
