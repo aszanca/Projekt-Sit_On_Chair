@@ -124,7 +124,7 @@
 	font-weight: 800;
 	font-style: italic;
 }
-$colors: ( mainColor: #27c7ab, pricingBackground: #F2F2F2, lightFontColor: #c2c2c2, darkFontColor: #787878, pricingFeaturesDarkBackground: #E4E4E4, pricingFeaturesLightBackground: #F1F1F1, placeholderFontColor: #989898, );
+$colors: ( mainColor: #27c7ab, pricingBackground: #F2F2F2, pricingBoxBackground: #FAFAFA, lightFontColor: #c2c2c2, darkFontColor: #787878, pricingFeaturesDarkBackground: #E4E4E4, pricingFeaturesLightBackground: #F1F1F1, placeholderFontColor: #989898, );
 
 * {
 	padding: 0;
@@ -152,12 +152,13 @@ body {
 	h3 {
 		font-size: 1.5rem;
 		border-bottom: 0.4rem solid map-get($colors, mainColor);
-		width: 270px;
+		width: 240px;
 		padding: 5vh 0 2vh;
-		margin: 0 3vw 2vh;
+		margin: 0 3vw 2vh 7vw;
 		color: map-get($colors, darkFontColor);
 		font-weight: 300;
 	}
+
 
 	button {
 		background-color: map-get($colors, mainColor);
@@ -195,6 +196,7 @@ body {
 		height: 3vh;
 		display: flex;
 		align-items: center;
+		align-content: center;
 		margin-right: 3vh;
 		padding: 0;
 
@@ -206,6 +208,7 @@ body {
 			padding: 0.7vh;
 			position: relative;
 
+/* Dropdown menu
 			&:hover {
 				.dropdown_menu {
 					display: flex;
@@ -260,8 +263,12 @@ body {
 				a {
 					color: white;
 				}
+
 			}
+			*/
 		}
+
+
 	}
 }
 
@@ -470,6 +477,7 @@ body {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		margin-left: 4vh;
 
 	}
 
@@ -482,10 +490,6 @@ body {
 
 		display: flex;
 		align-items: flex-end;
-
-
-
-
 
 
 		@media (min-width: 448px) {
@@ -510,7 +514,7 @@ body {
 	.product_name_box {
 		width: 100%;
 		height: 28%;
-		padding: 2.5vh 0 0 3.5vw;
+		padding: 10px 0 0 10px;
 		background-color: rgba(255, 255, 255, 0.5);
 		display: flex;
 
@@ -523,7 +527,7 @@ body {
 			font-weight: bold;
 			font-size: 1rem;
 			width: 140px;
-			height: 3vh;
+			height: 18px;
 			border-bottom: 0.4rem solid map-get($colors, mainColor);
 		}
 	}
@@ -534,7 +538,7 @@ body {
 			font-weight: bold;
 			font-size: 1rem;
 			width: 140px;
-			height: 3vh;
+			height: 18px;
 			border-bottom: 0.4rem solid map-get($colors, mainColor);
 		}
 	}
@@ -562,7 +566,7 @@ body {
 		.text_box_title {
 			width: 140px;
 			height: 3vh;
-			padding: 2vh 0 3vh;
+			padding: 20px 0 20px;
 			margin: 3vh 0 2vh 2vh 0;
 			border-bottom: 0.4rem solid map-get($colors, mainColor);
 
@@ -576,26 +580,39 @@ body {
 		}
 	}
 }
-
-
-
 // Product boxes END
+
+
 // Pricing boxes START
+.pricing_boxes {
+	padding-bottom: 3vh;
+	background-color: map-get($colors, pricingBackground);
+
+
 .pricing_boxes_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding-bottom: 3vh;
-	background-color: map-get($colors, pricingBackground);
+
+
+	@media (min-width: 650px) {
+flex-direction: row;
+		flex-wrap: wrap;
+	}
 
 	.pricing_box_container {
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		width: 90vw;
-		height: 69vh;
-		margin: 1.25vh 0;
+		width: 78vw;
+		height: 470px;
+		margin: 10px 13px 0 13px;
+
+@media (min-width: 448px) {
+	width: 295px;
+
+}
 
 		.outer_circle {
 			display: flex;
@@ -607,7 +624,7 @@ body {
 			border-radius: 100px;
 			position: absolute;
 			background-color: white;
-			margin-bottom: 50px;
+
 
 			.inner_circle {
 				width: 28px;
@@ -622,15 +639,23 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
 			width: 78vw;
-			height: 65vh;
-			margin: 6vh 2.5vh 2.5vh;
+			height: 430px;
+			margin-top: 40px;
 			border: 0.065rem solid lightgrey;
 			background-color: white;
 
+
+				@media (min-width: 448px) {
+					width: 295px;
+					height: 430px;
+				}
+
+
 			.plan_name {
 				font-size: 1.25rem;
-				padding-top: 4vh;
+				padding: 30px 0 15px 0;
 				color: map-get($colors, mainColor);
 				font-weight: 400;
 				font-stretch: ultra-condensed;
@@ -651,13 +676,13 @@ body {
 				background-color: white;
 				border: 0.065rem solid lightgrey;
 				font-stretch: ultra-condensed;
-				margin: 2vh 0;
+				margin: 10px 0;
 				font-size: 2rem;
 
 .price {
 	display: flex;
 	flex-direction: row;
-	height: 5vh;
+	height: 34px;
 
 	.main_price {
 		font-size: 2rem;
@@ -671,7 +696,7 @@ body {
 				.currency {
 					font-size: 0.8rem;
 					font-stretch: ultra-condensed;
-					margin-top: 1vh;
+					margin-top: 5px;
 				}
 			}
 
@@ -689,6 +714,10 @@ body {
 					background-color: map-get($colors, pricingFeaturesDarkBackground);
 					padding: 1.2vh;
 					width: 77.5vw;
+
+					@media (min-width: 448px) {
+						width: 293px;
+					}
 				}
 
 				.light_row {
@@ -697,6 +726,10 @@ body {
 					background-color: map-get($colors, pricingFeaturesLightBackground);
 					padding: 1.2vh;
 					width: 77.5vw;
+
+					@media (min-width: 448px) {
+						width: 293px;
+					}
 				}
 			}
 
@@ -709,9 +742,9 @@ body {
 					align-self: flex-end;
 					align-items: center;
 					justify-content: center;
-					width: 30vw;
-					height: 5vh;
-					margin: 2.5vh;
+					width: 130px;
+					height: 38px;
+					margin: 15px;
 					border-radius: 0.55rem;
 					font-size: 1rem;
 				}
@@ -848,6 +881,7 @@ body {
 //Pricing box - hover END
 
 }
+}
 // Pricing boxes END
 // Contactform START
 
@@ -867,20 +901,57 @@ body {
 		align-content: center;
 		align-items: center;
 
+		@media (min-width: 769px) and (max-width: 970px) {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 90vw;
+		}
+
+		@media (min-width: 971px) {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin: 0 5vw;
+			width: 90vw;
+		}
+
+
+
+		.contact_form_left_column_for_rwd {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			align-items: center;
+
+			@media (min-width: 769px) {
+				flex-grow: 2;
+			}
+
 		.input {
 			padding-left: 2vw;
 			width: 78vw;
-			height: 8vh;
-			margin: 2vh;
+			height: 6vh;
+			margin: 10px;
 			border: 0.01rem solid map-get($colors, mainColor);
 			font-size: 1.5rem;
 			font-family: Raleway, Helvetica, sans-serif;
 			color: map-get($colors, placeholderFontColor);
 			font-weight: 100;
+
+			@media (min-width: 769px) {
+				width: 100%;
+			}
+
+			@media (max-width: 767px) and (orientation: landscape) {
+				height: 15vh;
+			}
 		}
 
 		.textarea {
-			height: 30vh;
+			height: 23vh;
 			padding-top: 1.65vh;
 			color: map-get($colors, placeholderFontColor);
 			font-weight: 100;
@@ -889,11 +960,26 @@ body {
 			align-items: center;
 			resize: none;
 
+			@media  (max-width: 767px) and (orientation: landscape) {
+				height: 40vh;
+			}
 		}
+	}
+
+.contact_form_right_column_for_rwd {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+
+	@media (min-width: 769px) {
+		width: 37vw;
+	}
+
 
 		img {
-			width: 200px;
-			height: 159px;
+			width: 230px;
+			height: 185px;
 		}
 		// Checkbox START
 		.agree_checkbox_container {
@@ -901,15 +987,20 @@ body {
 			flex-direction: row-reverse;
 			align-items: center;
 			justify-content: center;
-			width: 78vw;
+			width: 300px;
 			height: 7vh;
 			margin: 3vh 0;
+
+			@media (max-width: 767px) and (orientation: landscape) {
+			 margin: 6vh;
+			}
+
 
 			.checkbox_text {
 				color: map-get($colors, lightFontColor);
 				margin-left: 2vw;
 				font-weight: 100;
-				width: 60vw;
+				width: 220px;
 			}
 		}
 
@@ -935,27 +1026,18 @@ body {
 			opacity: 0.8;
 		}
 		//Checkbox END
+
 		.submit_button {
 			border-radius: 10px;
-			width: 70vw;
-			height: 8vh;
+			width: 280px;
+			height: 60px;
 			font-size: 1.5rem;
+			font-weight: 500;
 		}
 	}
 }
-
-@media (min-width: 568px) and (max-width: 768px) {
-
 }
 
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1025px) {
-
-}
 
 
 // Contactform END
@@ -966,11 +1048,20 @@ body {
 	align-items: center;
 	flex-direction: column;
 
+
 	.footer_container {
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 3vh;
 		width: 78vw;
+
+
+		@media (min-width: 769px) {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			align-items: flex-end;
+			width: 90vw;
+		}
 
 		.footer_logos {
 			display: flex;
@@ -979,9 +1070,21 @@ body {
 			align-items: center;
 			width: 78vw;
 
+
+			@media (min-width: 769px) {
+				flex-grow: 2;
+				flex-direction: row-reverse;
+				justify-content: flex-start;
+
+			}
+
 			.footer_logo {
 				color: map-get($colors, darkFontColor);
 				font-size: 1.1rem;
+
+				@media (min-width: 769px) {
+					margin-left: 50px;
+				}
 			}
 
 			.icons {
@@ -995,22 +1098,17 @@ body {
 		.copy_text {
 			font-size: 0.8rem;
 			color: map-get($colors, darkFontColor);
+
+
+			@media (min-width: 769px) {
+				width: 60vw;
+				font-size: 0.9rem;
+
+			}
 		}
 	}
 }
 
-@media (min-width: 568px) and (max-width: 768px) {
-
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1025px) {
-
-}
 
 
 // Footer END
