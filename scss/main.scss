@@ -255,18 +255,6 @@ body {
 	}
 }
 
-@media (min-width: 568px) and (max-width: 768px) {
-
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1025px) {
-
-}
 
 
 
@@ -279,11 +267,35 @@ body {
 	background-image: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%);
 	padding: 5vw;
 
+	@media (min-width: 769px) and (max-width: 1024px) {
+		justify-content: center;
+		align-content: space-between;
+		align-items: center;
+
+	}
+
+	@media (min-width: 1025px) {
+			justify-content: center;
+			align-content: space-between;
+			align-items: center;
+	}
+
 	.slider_arrow {
 		color: map-get($colors, mainColor);
 		font-size: 3.75rem;
 		height: 5rem;
 		padding-bottom: 25vh;
+		font-weight: 200;
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+			padding: 0 2rem;
+
+		}
+
+		@media (min-width: 1025px) {
+			padding: 0 2rem;
+
+		}
 	}
 
 	.slider_content {
@@ -291,7 +303,10 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		position: relative;
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+				flex-direction: row;
+		}
 
 		@media (min-width: 1025px) {
 				flex-direction: row;
@@ -304,11 +319,36 @@ body {
 			justify-content: center;
 			align-items: center;
 
+			@media (min-width: 769px) and (max-width: 1024px) {
+				align-items: flex-start;
+				width: 35vw;
+				height: 35vh;
+
+			}
+
+			@media (min-width: 1025px) {
+				align-items: flex-start;
+				width: 41vw;
+				height: 42vh;
+
+			}
+
 			img {
 				position: absolute;
 				height: 225px;
 				width: 313px;
+
+				@media (min-width: 769px) and (max-width: 1024px) {
+					width: 430px;
+					height: 285px;
+				}
+
+				@media (min-width: 1025px) {
+					width: 530px;
+					height: 375px;
+				}
 			}
+
 		}
 
 		.slider_description_box {
@@ -316,18 +356,52 @@ body {
 			flex-direction: column;
 			align-items: center;
 
+@media (min-width: 769px) and (max-width: 1024px) {
+	align-content: center;
+	justify-content: center;
+	width: 30vw;
+	height: 35vh;
+
+}
+
+			@media (min-width: 1025px) {
+				align-content: center;
+				justify-content: center;
+				width: 30vw;
+				height: 40vh;
+
+			}
+
 			h2 {
 				text-transform: uppercase;
 				font-size: 1.5625rem;
 				word-spacing: 0.4rem;
 				text-align: center;
+
+				@media (min-width: 769px) and (max-width: 1024px) {
+					font-size: 1.4rem;
+					font-weight: 700;
+				}
+
+				@media (min-width: 1025px) {
+					font-size: 2rem;
+					font-weight: 500;
+				}
 			}
+
+
 
 			.slider_text {
 				text-align: center;
 				line-height: 1.2rem;
 				font-size: 0.85rem;
 				margin: 3vw;
+
+				@media (min-width: 769px) and (max-width: 1024px) {
+					font-size: 0.75rem;
+					line-height: 1.1rem;
+					margin: 2vw;
+				}
 			}
 
 			.slider_button {
@@ -339,6 +413,17 @@ body {
 					width: 55vw;
 					height: 8vh;
 					font-size: 1.3rem;
+
+					@media (min-width: 769px) and (max-width: 1024px) {
+						width: 21vw;
+						height: 5vh;
+						font-size: 1.1rem;
+					}
+
+					@media (min-width: 1025px) {
+						width: 20vw;
+						height: 5.5vh;
+					}
 				}
 			}
 		}
@@ -348,6 +433,7 @@ body {
 
 // Slider END
 // Product boxes START
+
 .product_boxes {
 	display: flex;
 	flex-direction: column;
@@ -356,7 +442,23 @@ body {
 	padding: 2vh 0;
 
 	@media (min-width: 1025px) {
-			flex-direction: row;
+		flex-direction: row;
+	}
+
+.product_boxes_for_rwd {
+
+	@media (min-width: 769px) and (max-width: 1024px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@media (min-width: 1025px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.product_box {
@@ -366,11 +468,33 @@ body {
 		background-size: contain;
 		margin: 2.5vh;
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
+
+
+		@media (min-width: 448px) and (max-width: 768px) {
+			width: 310px;
+			height: 210px;
+
+		}
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 350px;
+		}
+
+		@media (min-width: 1025px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 350px;
+		}
 	}
 
 	.product_box1 {
 		background-image: url("../../images/box1_img.jpg");
+
 	}
 
 	.product_box2 {
@@ -408,6 +532,7 @@ body {
 			border-bottom: 0.4rem solid map-get($colors, mainColor);
 		}
 	}
+}
 
 	.text_box {
 		height: 40vh;
@@ -510,9 +635,19 @@ body {
 				margin: 2vh 0;
 				font-size: 2rem;
 
+.price {
+	display: flex;
+	flex-direction: row;
+	height: 5vh;
+
+	.main_price {
+		font-size: 2rem;
+	}
 				.price_sup {
 					font-size: 0.8rem;
+					align-self: flex-start;
 				}
+			}
 
 				.currency {
 					font-size: 0.8rem;
@@ -563,19 +698,6 @@ body {
 				}
 			}
 		}
-	}
-
-	@media (min-width: 568px) and (max-width: 768px) {
-
-	}
-
-
-	@media (min-width: 769px) and (max-width: 1024px) {
-
-	}
-
-	@media (min-width: 1025px) {
-
 	}
 
 
