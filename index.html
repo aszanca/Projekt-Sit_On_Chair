@@ -16,10 +16,12 @@
       </p>
       <nav>
         <ul class="main_menu">
-          <li>
-            O FIRMIE
-<!-- dropdown menu
-            <ul class='dropdown_menu'>
+          <li> <a href="#">O FIRMIE</a>
+
+<!-- Dropdown menu START -->
+            <ul class="dropdown_menu">
+              <li class="transparent_li">
+              </li>
               <li>
                 <a href="#">Aktualności</a>
               </li>
@@ -30,7 +32,8 @@
                 <a href="#">Historia</a>
               </li>
             </ul>
-          -->
+
+          <!-- Dropdown menu END-->
           </li>
           <li>GALERIA</li>
           <li>KONTAKT</li>
@@ -42,9 +45,16 @@
   <div class="main_width">
     <section class="slider">
       <div class="slider_arrow">
-        &lt;
+        <button type="button" class="slider_arrow_button" id="prev"> &lt; </button>
       </div>
+
       <div class="slider_content">
+
+<!--Slider with JavaScript START-->
+
+        <ul>
+
+          <li class="slider_element visible">
         <div class="slider_image">
           <img src="images/black_chair.png">
         </div>
@@ -57,9 +67,35 @@
             <button type="button" class="more_button">Zobacz więcej</button>
           </div>
         </div>
+      </li>
+
+
+
+  <li class="slider_element">
+<div class="slider_image">
+  <img src="images/black_chair.png">
+</div>
+<div class="slider_description_box">
+  <h2>Sit <span class="green_word">on</span> another <span class="green_word">chair</span></h2>
+  <p class="slider_text">
+    Curabitur et ligula. Ut molestie a, ultricies porta urna. Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
+  </p>
+  <div class="slider_button">
+    <button type="button" class="more_button">Sprawdź sam</button>
+  </div>
+</div>
+</li>
+
+    </ul>
+
+<!--Slider with JavaScript END-->
+
+
       </div>
       <div class="slider_arrow">
+        <button type="button" class="slider_arrow_button" id="next">
         &gt;
+      </button>
       </div>
     </section>
   </div>
@@ -97,7 +133,7 @@
       <div class="pricing_boxes_container">
 
 
-        <!--Pricing box 1 -->
+        <!--Pricing box 1 START -->
         <div class="pricing_box_container">
           <div class="outer_circle">
             <div class="inner_circle">
@@ -128,8 +164,9 @@
             </div>
           </div>
         </div>
+        <!--Pricing box 1 END -->
 
-        <!--Pricing box 2 -->
+        <!--Pricing box 2 START-->
       <!-- <div class="pricing_box_hover"> -->
         <div class="pricing_box_container">
           <div class="outer_circle">
@@ -164,9 +201,10 @@
             </div>
           </div>
         </div>
+        <!--Pricing box 2 END -->
     <!--  </div> -->
-        <!--Pricing box 3 -->
 
+        <!--Pricing box 3 START -->
         <div class="pricing_box_container">
           <div class="outer_circle">
             <div class="inner_circle">
@@ -203,7 +241,7 @@
             </div>
           </div>
         </div>
-
+<!--Pricing box 3 END -->
 
       </div>
     </section>
