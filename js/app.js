@@ -1,7 +1,7 @@
  document.addEventListener("DOMContentLoaded", function() {
 
 
-// Dropdown menu STARt
+// Dropdown menu START
 
 var main_menu = document.querySelector(".main_menu").children;
 
@@ -21,8 +21,7 @@ if (this.children.length > 0) {
       });
 }
 
-
-
+// Dropdown menu END
 
 // Slider START
     var prev = document.getElementById('prev');
@@ -53,7 +52,7 @@ if (this.children.length > 0) {
     });
 //Slider END
 
-// Product boxes names hidden
+// Product boxes names hidden START
 
 var product_box = document.querySelectorAll('.product_box');
 
@@ -70,8 +69,26 @@ for(var i = 0; i < product_box.length; i++){
     this.firstElementChild.style.display = "none";
   });
 }
+// Product boxes names hidden END
 
 
+// Pricing boxes color changes - hover START
+
+var pricing_box = document.querySelectorAll('.pricing_box_container');
+
+for(var i = 0; i < pricing_box.length; i++){
+  pricing_box[i].addEventListener("mouseover", function(){
+this.parentElement.classList.add('pricing_box_hover');
+
+  });
+}
+
+
+for(var i = 0; i < pricing_box.length; i++){
+  pricing_box[i].addEventListener("mouseout", function(){
+    this.parentElement.classList.remove('pricing_box_hover');
+  });
+}
 
 
 
