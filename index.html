@@ -1,117 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Projekt-Sit_on_Chair</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='assets/css/main.css' rel='stylesheet' />
 </head>
+
 <body>
-
-
-
-    <header class="header">
-      <p class="logo">
-        SIT <span class="green_word">ON</span> CHAIR
-      </p>
-      <nav>
-        <ul class="main_menu">
-          <li> <a href="#">O FIRMIE</a>
-
-<!-- Dropdown menu START -->
+  <header class="header">
+    <p class="logo">
+      SIT <span class="green_word">ON</span> CHAIR
+    </p>
+    <nav>
+      <ul class="main_menu">
+        <li> <a href="#">O FIRMIE</a>
+          <ul class="dropdown_menu">
+            <li class="transparent_li">
+            </li>
+            <li>
+              <a href="#">Aktualności</a>
+            </li>
+            <li>
+              <a href="#">Nasz team</a>
+            </li>
+            <li>
+              <a href="#">Historia</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">GALERIA</a>
+          <ul class="dropdown_menu">
+            <li class="transparent_li">
+            </li>
+            <li>
+              <a href="#">Produkty</a>
+            </li>
+            <li>
+              <a href="#">Aktualności</a>
+            </li>
+            <li>
+              <a href="#">Projekty</a>
+            </li>
+            <li>
+              <a href="#">Wnętrza</a>
+            </li>
+            <li>
+              <a href="#">Materiały</a>
+            </li>
+          </ul>
+          <li><a href="#">KONTAKT</a>
             <ul class="dropdown_menu">
               <li class="transparent_li">
               </li>
               <li>
-                <a href="#">Aktualności</a>
+                <a href="#">Adres</a>
               </li>
               <li>
-                <a href="#">Nasz team</a>
-              </li>
-              <li>
-                <a href="#">Historia</a>
+                <a href="#">Informacje</a>
               </li>
             </ul>
-
-          <!-- Dropdown menu END-->
           </li>
-          <li>GALERIA</li>
-          <li>KONTAKT</li>
-        </ul>
-      </nav>
-    </header>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="slider">
+    <div class="slider_arrow">
+      <button type="button" class="slider_arrow_button" id="prev"> &lt; </button>
+    </div>
+    <div class="slider_content">
 
-    <section class="slider">
-      <div class="slider_arrow">
-        <button type="button" class="slider_arrow_button" id="prev"> &lt; </button>
-      </div>
-
-      <div class="slider_content">
-
-<!--Slider with JavaScript START-->
-
-        <ul>
-
-          <li class="slider_element visible">
-        <div class="slider_image">
-          <img src="images/black_chair.png">
-        </div>
-        <div class="slider_description_box">
-          <h2>Sit <span class="green_word">on</span> our <span class="green_word">chair</span></h2>
-          <p class="slider_text">
-            Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
-          </p>
-          <div class="slider_button">
-            <button type="button" class="more_button">Zobacz więcej</button>
+      <!--Slider with JavaScript START-->
+      <ul>
+        <li class="slider_element visible">
+          <div class="slider_image">
+            <img src="images/black_chair.png">
           </div>
-        </div>
-      </li>
+          <div class="slider_description_box">
+            <h2>Sit <span class="green_word">on</span> our <span class="green_word">chair</span></h2>
+            <p class="slider_text">
+              Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
+            </p>
+            <div class="slider_button">
+              <button type="button" class="more_button">Zobacz więcej</button>
+            </div>
+          </div>
+        </li>
+        <li class="slider_element">
+          <div class="slider_image">
+            <img src="images/black_chair.png">
+          </div>
+          <div class="slider_description_box">
+            <h2>Sit <span class="green_word">on</span> another <span class="green_word">chair</span></h2>
+            <p class="slider_text">
+              Curabitur et ligula. Ut molestie a, ultricies porta urna. Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
+            </p>
+            <div class="slider_button">
+              <button type="button" class="more_button">Sprawdź sam</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--Slider with JavaScript END-->
 
-
-
-  <li class="slider_element">
-<div class="slider_image">
-  <img src="images/black_chair.png">
-</div>
-<div class="slider_description_box">
-  <h2>Sit <span class="green_word">on</span> another <span class="green_word">chair</span></h2>
-  <p class="slider_text">
-    Curabitur et ligula. Ut molestie a, ultricies porta urna. Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
-  </p>
-  <div class="slider_button">
-    <button type="button" class="more_button">Sprawdź sam</button>
-  </div>
-</div>
-</li>
-
-    </ul>
-
-<!--Slider with JavaScript END-->
-
-
-      </div>
-      <div class="slider_arrow">
-        <button type="button" class="slider_arrow_button" id="next">
+    </div>
+    <div class="slider_arrow">
+      <button type="button" class="slider_arrow_button" id="next">
         &gt;
       </button>
-      </div>
-    </section>
-
+    </div>
+  </section>
 
   <div class="main_width">
     <section class="product_boxes">
       <div class="product_boxes_for_rwd">
-      <div class="product_box product_box1">
-        <div class="product_name_box product_name_box1">
+        <div class="product_box product_box1">
+          <div class="product_name_box product_name_box1">
+          </div>
+        </div>
+        <div class="product_box product_box2">
+          <div class="product_name_box product_name_box2">
+          </div>
         </div>
       </div>
-      <div class="product_box product_box2">
-        <div class="product_name_box product_name_box2">
-        </div>
-      </div>
-    </div>
-
       <div class="text_box">
         <div class="text_box_title">
           <h4>Finds all inputs</h4>
@@ -131,123 +144,119 @@
       <h3>CENNIK</h3>
       <div class="pricing_boxes_container">
 
-
         <!--Pricing box 1 START -->
         <div>
-        <div class="pricing_box_container">
-
-          <div class="outer_circle">
-            <div class="inner_circle">
-            </div>
-          </div>
-          <div class="pricing_box">
-            <h4 class="plan_name">BASIC PLAN</h4>
-            <div class="price_circle">
-              <div class="price">
-              <div class="main_price">85
-              </div>
-              <div class="price_sup">99</div>
-              </div>
-              <span class="currency">PLN/MSC</span>
-            </div>
-            <div class="features_list">
-              <div class="dark_row">
-                Zakup towaru + dowóz
-              </div>
-              <div class="light_row">
-                Serwis
+          <div class="pricing_box_container">
+            <div class="outer_circle">
+              <div class="inner_circle">
               </div>
             </div>
-            <div class="join_button_box">
-              <button type="button" class="join_button">
+            <div class="pricing_box">
+              <h4 class="plan_name">BASIC PLAN</h4>
+              <div class="price_circle">
+                <div class="price">
+                  <div class="main_price">85
+                  </div>
+                  <div class="price_sup">99</div>
+                </div>
+                <span class="currency">PLN/MSC</span>
+              </div>
+              <div class="features_list">
+                <div class="dark_row">
+                  Zakup towaru + dowóz
+                </div>
+                <div class="light_row">
+                  Serwis
+                </div>
+              </div>
+              <div class="join_button_box">
+                <button type="button" class="join_button">
               DOŁĄCZ
             </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <!--Pricing box 1 END -->
 
         <!--Pricing box 2 START-->
-  <div>
-        <div class="pricing_box_container">
-
-          <div class="outer_circle">
-            <div class="inner_circle">
-            </div>
-          </div>
-          <div class="pricing_box">
-            <h4 class="plan_name">STANDARD PLAN</h4>
-            <div class="price_circle">
-              <div class="price">
-              <div class="main_price">95
-              </div>
-              <div class="price_sup">99</div>
-              </div>
-              <span class="currency">PLN/MSC</span>
-            </div>
-            <div class="features_list">
-              <div class="dark_row">
-                Zakup towaru + dowóz
-              </div>
-              <div class="light_row">
-                Serwis
-              </div>
-              <div class="dark_row">
-                Gwarancja 5 lat
+        <div>
+          <div class="pricing_box_container">
+            <div class="outer_circle">
+              <div class="inner_circle">
               </div>
             </div>
-            <div class="join_button_box">
-              <button type="button" class="join_button">
+            <div class="pricing_box">
+              <h4 class="plan_name">STANDARD PLAN</h4>
+              <div class="price_circle">
+                <div class="price">
+                  <div class="main_price">95
+                  </div>
+                  <div class="price_sup">99</div>
+                </div>
+                <span class="currency">PLN/MSC</span>
+              </div>
+              <div class="features_list">
+                <div class="dark_row">
+                  Zakup towaru + dowóz
+                </div>
+                <div class="light_row">
+                  Serwis
+                </div>
+                <div class="dark_row">
+                  Gwarancja 5 lat
+                </div>
+              </div>
+              <div class="join_button_box">
+                <button type="button" class="join_button">
               DOŁĄCZ
             </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
         <!--Pricing box 2 END -->
 
         <!--Pricing box 3 START -->
-          <div>
-        <div class="pricing_box_container">
-
-          <div class="outer_circle">
-            <div class="inner_circle">
-            </div>
-          </div>
-          <div class="pricing_box">
-            <h4 class="plan_name">ADVANCE PLAN</h4>
-            <div class="price_circle">
-              <div class="price">
-              <div class="main_price">211
-              </div>
-              <div class="price_sup">00</div>
-              </div>
-              <span class="currency">PLN/MSC</span>
-            </div>
-            <div class="features_list">
-              <div class="dark_row">
-                Zakup towaru + dowóz
-              </div>
-              <div class="light_row">
-                Serwis
-              </div>
-              <div class="dark_row">
-                Gwarancja 6 lat
-              </div>
-              <div class="light_row">
-                Porady projektanta
+        <div>
+          <div class="pricing_box_container">
+            <div class="outer_circle">
+              <div class="inner_circle">
               </div>
             </div>
-            <div class="join_button_box">
-              <button type="button" class="join_button">
+            <div class="pricing_box">
+              <h4 class="plan_name">ADVANCE PLAN</h4>
+              <div class="price_circle">
+                <div class="price">
+                  <div class="main_price">211
+                  </div>
+                  <div class="price_sup">00</div>
+                </div>
+                <span class="currency">PLN/MSC</span>
+              </div>
+              <div class="features_list">
+                <div class="dark_row">
+                  Zakup towaru + dowóz
+                </div>
+                <div class="light_row">
+                  Serwis
+                </div>
+                <div class="dark_row">
+                  Gwarancja 6 lat
+                </div>
+                <div class="light_row">
+                  Porady projektanta
+                </div>
+              </div>
+              <div class="join_button_box">
+                <button type="button" class="join_button">
               DOŁĄCZ
             </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-<!--Pricing box 3 END -->
+        <!--Pricing box 3 END -->
 
       </div>
     </section>
@@ -259,20 +268,20 @@
       <div class="contact_form_container">
         <form>
           <div class="contact_form_left_column_for_rwd">
-          <input class="input" type="text" name="first_name" placeholder="Imię">
-          <input class="input" type="email" name="email" placeholder="email">
-          <textarea class="textarea input" placeholder="Wiadomość"></textarea>
-        </div>
-        <div class="contact_form_right_column_for_rwd">
-          <img src="images/red_chair.png">
-          <div class="agree_checkbox_container">
-            <span class="checkbox_text"> Zgadzam się na przetwarzanie danych osobowych
-            </span>
-            <input type="checkbox" id="agree_checkbox" class="dwcheckbox" checked/>
-            <label for="agree_checkbox"></label>
+            <input class="input" type="text" name="first_name" placeholder="Imię">
+            <input class="input" type="email" name="email" placeholder="email">
+            <textarea class="textarea input" placeholder="Wiadomość"></textarea>
           </div>
-          <button class="submit_button" type="submit">Wyślij</button>
-        </div>
+          <div class="contact_form_right_column_for_rwd">
+            <img src="images/red_chair.png">
+            <div class="agree_checkbox_container">
+              <span class="checkbox_text"> Zgadzam się na przetwarzanie danych osobowych
+            </span>
+              <input type="checkbox" id="agree_checkbox" class="dwcheckbox" checked/>
+              <label for="agree_checkbox"></label>
+            </div>
+            <button class="submit_button" type="submit">Wyślij</button>
+          </div>
         </form>
       </div>
     </section>
@@ -298,8 +307,7 @@
       </div>
     </footer>
   </div>
-
-
 </body>
+
 <script src="js/app.js" type="text/javascript"></script>
 </html>

@@ -12,7 +12,6 @@
 	font-weight: 100;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'Raleway';
 	src: url('../../fonts/Raleway-Black.eot');
@@ -27,7 +26,6 @@
 	font-weight: 300;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'Raleway';
 	src: url('../../fonts/Raleway-ExtraLight.eot');
@@ -49,7 +47,6 @@
 	font-weight: 800;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'Raleway';
 	src: url('../../fonts/Raleway-Regular.eot');
@@ -65,7 +62,6 @@
 	font-style: normal;
 }
 
-
 $colors: ( mainColor: #27c7ab, pricingBackground: #F2F2F2, pricingBoxBackground: #FAFAFA, lightFontColor: #c2c2c2, darkFontColor: #787878, pricingFeaturesDarkBackground: #E4E4E4, pricingFeaturesLightBackground: #F1F1F1, placeholderFontColor: #989898, );
 
 * {
@@ -74,15 +70,32 @@ $colors: ( mainColor: #27c7ab, pricingBackground: #F2F2F2, pricingBoxBackground:
 	box-sizing: border-box;
 }
 
-.green_word {
-	color: map-get($colors, mainColor);
-	font-weight: 600;
-}
-
 img {
 	width: 100%;
 	height: auto;
 }
+
+h3 {
+	font-size: 1.5rem;
+	border-bottom: 0.4rem solid map-get($colors, mainColor);
+	width: 240px;
+	padding: 5vh 0 2vh;
+	margin: 0 3vw 2vh 7vw;
+	color: map-get($colors, darkFontColor);
+	font-weight: 300;
+}
+
+button {
+	background-color: map-get($colors, mainColor);
+	border-radius: 0.8rem;
+	color: white;
+	text-transform: uppercase;
+	font-family: Raleway, Helvetica, sans-serif;
+	font-weight: 300;
+	border-style: none;
+	outline: none;
+}
+
 
 body {
 	font-family: 'Raleway', Helvetica, sans-serif;
@@ -90,51 +103,30 @@ body {
 	.main_width {
 		margin: 0 auto;
 		width: 100vw;
-
 		@media (min-width: 1200px) {
 			width: 1200px;
-			border: 1px solid red;
 		}
-
-	}
-
-
-	h3 {
-		font-size: 1.5rem;
-		border-bottom: 0.4rem solid map-get($colors, mainColor);
-		width: 240px;
-		padding: 5vh 0 2vh;
-		margin: 0 3vw 2vh 7vw;
-		color: map-get($colors, darkFontColor);
-		font-weight: 300;
-	}
-
-
-	button {
-		background-color: map-get($colors, mainColor);
-		border-radius: 0.8rem;
-		color: white;
-		text-transform: uppercase;
-		font-family: Raleway, Helvetica, sans-serif;
-		font-weight: 300;
-		border-style: none;
-		outline: none;
-
+		.green_word {
+			color: map-get($colors, mainColor);
+			font-weight: 600;
+		}
 	}
 }
+
 // Main header START
+
 .header {
 	background-color: black;
 	width: 100vw;
 	color: white;
 	font-size: 0.8rem;
 	height: 42px;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
 	.logo {
-
 		@media (min-width: 769px) {
 			margin-left: 11vh;
 		}
@@ -142,11 +134,10 @@ body {
 
 	.main_menu {
 		list-style-type: none;
+
 		display: flex;
 		align-items: center;
 		align-content: center;
-
-
 
 		@media (min-width: 769px) {
 			margin-right: 11vh;
@@ -154,17 +145,18 @@ body {
 
 		> li {
 			padding: 0.8vh;
-			position: relative;
 			margin: 1.7vh 0 1.7vh 2.5vw;
+
+			position: relative;
 			display: flex;
 			justify-content: center;
 
-
-// Dropdown menu START
-
+			// Dropdown menu START
 			a {
-				display: block;
 				text-decoration-line: none;
+
+				display: block;
+
 				&:link {
 					color: white;
 				}
@@ -175,11 +167,8 @@ body {
 					color: white;
 				}
 			}
-			.dropdown_menu {
-				flex-direction: column;
-				justify-content: center;
 
-				position: absolute;
+			.dropdown_menu {
 				display: none;
 				margin: 20px 0 0 12px;
 				padding: 11px 20px 4px 15px;
@@ -188,23 +177,28 @@ body {
 				line-height: 1.7rem;
 				font-weight: 100;
 
->li {
-	background-color: black;
-	padding: 0 10px 2px 15px;
-	border: 1px solid black;
-	position: relative;
-	z-index: 10;
-}
+				position: absolute;
+				flex-direction: column;
+				justify-content: center;
 
-.transparent_li {
-	background-color: transparent;
-	height: 12px;
-	border: none;
-}
+
+				> li {
+					background-color: black;
+					padding: 0 10px 2px 15px;
+					border: 1px solid black;
+
+					position: relative;
+					z-index: 10;
+				}
+
+				.transparent_li {
+					background-color: transparent;
+					height: 12px;
+					border: none;
+				}
 
 				&:before {
 					content: "";
-					position: absolute;
 					width: 0;
 					height: 0;
 					border-color: transparent transparent black transparent;
@@ -213,59 +207,55 @@ body {
 					top: 3px;
 					left: 55px;
 					margin-top: 8px;
+
+					position: absolute;
 				}
+
 				a {
 					color: white;
 				}
 			}
-//Dropdown menu END
+			//Dropdown menu END
 
 		}
 	}
 }
-
 // Main header END
 
-
 // Slider START
-
 .slider {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
 	background-image: linear-gradient(to bottom, #ffffff 0%,#dbdbdb 100%);
 	padding: 5vw;
 
-
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 
 	@media (min-width: 769px) and (max-width: 1024px) {
 		justify-content: center;
 		align-content: space-between;
 		align-items: center;
-
 	}
 
 	@media (min-width: 1025px) {
-			justify-content: center;
-			align-content: space-between;
-			align-items: center;
+		justify-content: center;
+		align-content: space-between;
+		align-items: center;
 	}
 
 	.slider_arrow {
 		height: 5rem;
 		padding-bottom: 25vh;
+
 		position: relative;
 		z-index: 99;
 
-
 		@media (min-width: 769px) and (max-width: 1024px) {
 			padding: 0 2rem;
-
 		}
 
 		@media (min-width: 1025px) {
 			padding: 0 2rem;
-
 		}
 
 		.slider_arrow_button {
@@ -274,14 +264,11 @@ body {
 			font-size: 3.75rem;
 			font-weight: 200;
 			background-color: rgba(255, 255, 255, 0);
-
-
 		}
-
-
 	}
 
 	.slider_content {
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -290,7 +277,6 @@ body {
 		ul {
 			list-style: none;
 		}
-
 		li {
 			display: none;
 		}
@@ -303,35 +289,36 @@ body {
 			align-items: center;
 
 			@media (min-width: 769px) {
-					flex-direction: row;
+				flex-direction: row;
 			}
 		}
 
 		.slider_image {
 			width: 72vw;
 			height: 200px;
+
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
 			@media (min-width: 769px) and (max-width: 1024px) {
-				align-items: flex-start;
 				width: 35vw;
 				height: 35vh;
 
-			}
-
-			@media (min-width: 1025px) {
 				align-items: flex-start;
+			}
+			@media (min-width: 1025px) {
 				width: 41vw;
 				height: 42vh;
 
+				align-items: flex-start;
 			}
 
 			img {
-				position: absolute;
 				height: 225px;
 				width: 313px;
+
+				position: absolute;
 
 				@media (min-width: 769px) and (max-width: 1024px) {
 					width: 430px;
@@ -343,26 +330,28 @@ body {
 					height: 375px;
 				}
 			}
-
 		}
 
 		.slider_description_box {
+
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 
-@media (min-width: 769px) and (max-width: 1024px) {
-	align-content: center;
-	justify-content: center;
-	width: 30vw;
-	height: 35vh;
+			@media (min-width: 769px) and (max-width: 1024px) {
+				width: 30vw;
+				height: 35vh;
 
-}
-			@media (min-width: 1025px) {
 				align-content: center;
 				justify-content: center;
+
+			}
+			@media (min-width: 1025px) {
 				width: 30vw;
 				height: 25vh;
+
+				align-content: center;
+				justify-content: center;
 
 			}
 
@@ -370,6 +359,7 @@ body {
 				text-transform: uppercase;
 				font-size: 1.56rem;
 				word-spacing: 0.4rem;
+
 				text-align: center;
 
 				@media (min-width: 769px) and (max-width: 1024px) {
@@ -384,8 +374,6 @@ body {
 				}
 			}
 
-
-
 			.slider_text {
 				text-align: center;
 				line-height: 1.2rem;
@@ -396,7 +384,6 @@ body {
 					font-size: 0.75rem;
 					line-height: 1.1rem;
 					margin: 2vw;
-
 				}
 
 				@media (min-width: 1025px) {
@@ -404,12 +391,11 @@ body {
 					line-height: 1.3rem;
 					margin: 3vw;
 					width: 400px;
-
-
 				}
 			}
 
 			.slider_button {
+
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -422,7 +408,6 @@ body {
 					@media (min-width: 769px) and (max-width: 1024px) {
 						width: 21vw;
 						height: 5vh;
-
 					}
 
 					@media (min-width: 1025px) {
@@ -434,577 +419,580 @@ body {
 		}
 	}
 }
-
-
 // Slider END
 
-
 // Product boxes START
-
 .product_boxes {
+	padding: 2vh 0;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2vh 0;
 
 	@media (min-width: 1025px) {
+
 		flex-direction: row;
 		align-items: flex-start;
 	}
 
-.product_boxes_for_rwd {
-	@media (min-width: 769px) and (max-width: 1024px) {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
+	.product_boxes_for_rwd {
+		@media (min-width: 769px) and (max-width: 1024px) {
 
-	@media (min-width: 1025px) and (max-width: 1200px){
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		margin-left: 4vh;
-
-	}
-
-	@media (min-width: 1201px) {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-
-
-
-	}
-
-	.product_box {
-		height: 30vh;
-		width: 78vw;
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin: 2.5vw;
-
-
-		display: flex;
-		align-items: flex-end;
-
-
-		@media (min-width: 448px) {
-			width: 320px;
-			height: 230px;
-			align-items: flex-end;
+			display: flex;
+			flex-direction: row;
 			justify-content: center;
-			margin: 1vh;
+			align-items: center;
 		}
+		@media (min-width: 1025px) and (max-width: 1200px) {
+			margin-left: 4vh;
 
-		@media (min-width: 448px) {
-			width: 320px;
-			height: 230px;
-			align-items: flex-end;
+			display: flex;
+			flex-direction: row;
 			justify-content: center;
-
+			align-items: center;
 		}
 
 		@media (min-width: 1201px) {
-			width: 320px;
-			height: 230px;
-			align-items: flex-end;
+
+			display: flex;
+			flex-direction: row;
 			justify-content: center;
-			margin-right: 17px;
-
+			align-items: center;
 		}
 
-	}
+		.product_box {
+			height: 30vh;
+			width: 78vw;
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 2.5vw;
 
-	.product_box1 {
-		background-image: url("../../images/box1_img.jpg");
+			display: flex;
+			align-items: flex-end;
 
-	}
+			@media (min-width: 448px) {
+				width: 320px;
+				height: 230px;
+				margin: 1vh;
 
-	.product_box2 {
-		background-image: url("../../images/box2_img.jpg");
-	}
+				align-items: flex-end;
+				justify-content: center;
+			}
 
-	.product_name_box {
-		width: 100%;
-		height: 25%;
-		padding: 13px 0 0 12px;
-		background-color: rgba(255, 255, 255, 0.5);
-		display: flex;
-		margin: 0 0 8%;
-	}
+			@media (min-width: 448px) {
+				width: 320px;
+				height: 230px;
 
-	.product_name_box1 {
-		&::after {
-			content: "Chair CLAIR";
-			font-weight: 600;
-			font-size: 1rem;
-			width: 140px;
-			height: 18px;
-			border-bottom: 0.4rem solid map-get($colors, mainColor);
+				align-items: flex-end;
+				justify-content: center;
+			}
+
+			@media (min-width: 1201px) {
+				width: 320px;
+				height: 230px;
+				margin-right: 17px;
+
+				align-items: flex-end;
+				justify-content: center;
+			}
+		}
+
+		.product_box1 {
+			background-image: url("../../images/box1_img.jpg");
+		}
+
+		.product_box2 {
+			background-image: url("../../images/box2_img.jpg");
+		}
+
+		.product_name_box {
+			width: 100%;
+			height: 25%;
+			padding: 13px 0 0 12px;
+			background-color: rgba(255, 255, 255, 0.5);
+			margin: 0 0 8%;
+
+			display: flex;
+		}
+
+		.product_name_box1 {
+			&::after {
+				content: "Chair CLAIR";
+				font-weight: 600;
+				font-size: 1rem;
+				width: 140px;
+				height: 18px;
+				border-bottom: 0.4rem solid map-get($colors, mainColor);
+			}
+		}
+
+		.product_name_box2 {
+			&::after {
+				content: "Chair MARGARITA";
+				font-weight: 600;
+				font-size: 1rem;
+				width: 140px;
+				height: 18px;
+				border-bottom: 0.4rem solid map-get($colors, mainColor);
+			}
 		}
 	}
-
-	.product_name_box2 {
-		&::after {
-			content: "Chair MARGARITA";
-			font-weight: 600;
-			font-size: 1rem;
-			width: 140px;
-			height: 18px;
-			border-bottom: 0.4rem solid map-get($colors, mainColor);
-		}
-	}
-}
 
 	.text_box {
-
 		width: 78vw;
 		margin: 2vw;
+
+		border: 0.065rem solid lightgrey;
+		padding: 0 2vh;
+
 		display: flex;
 		flex-direction: column;
-		border: 0.065rem solid lightgrey;
-
-		padding: 0 2vh 0 2vh;
 
 		@media (min-width: 1025px) {
 			width: 345px;
 			height: 247px;
+			margin: 1vh 2vw;
+
 			align-items: flex-start;
 			align-content: flex-start;
 			justify-content: flex-start;
-			margin: 1vh 2vw;
 		}
 
 		.text_box_title {
 			width: 140px;
 			height: 3vh;
-			padding: 20px 0 20px;
+			padding: 20px 0;
 			margin: 3vh 0 2vh 2vh 0;
 			border-bottom: 0.4rem solid map-get($colors, mainColor);
 			font-weight: 600;
-
 		}
 
 		p {
 			font-size: 0.85rem;
 			color: map-get($colors, darkFontColor);
-			padding: 1vh 0 2vh 0;
-
+			padding: 1vh 0 2vh;
 		}
 	}
 }
 // Product boxes END
-
 
 // Pricing boxes START
 .pricing_boxes {
 	padding-bottom: 3vh;
 	background-color: map-get($colors, pricingBackground);
 
+	.pricing_boxes_container {
 
-.pricing_boxes_container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-
-
-	@media (min-width: 650px) {
-flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-	.pricing_box_container {
 		display: flex;
 		justify-content: center;
-		align-items: flex-start;
-		width: 78vw;
-		height: 550px;
-		margin: 10px 13px 0 13px;
+		align-items: center;
+		flex-direction: column;
 
-@media (min-width: 448px) {
-	width: 330px;
+		@media (min-width: 650px) {
 
-}
-
-@media (min-width: 1025px) {
-	width: 330px;
-height: 600px;
-}
-
-
-		.outer_circle {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 56px;
-			height: 56px;
-			border: 0.065rem solid lightgrey;
-			border-radius: 100px;
-			position: absolute;
-			background-color: white;
-
-
-			.inner_circle {
-				width: 25px;
-				height: 25px;
-				border: 0.065rem solid lightgrey;
-				border-radius: 100px;
-				background-color: map-get($colors, lightFontColor);
-			}
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 
-		.pricing_box {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
+		.pricing_box_container {
 			width: 78vw;
-			height: 430px;
-			margin-top: 40px;
-			border: 0.065rem solid lightgrey;
-			background-color: white;
+			height: 550px;
+			margin: 10px 13px 0;
 
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+
+			@media (min-width: 448px) {
+				width: 330px;
+			}
+
+			@media (min-width: 1025px) {
+				width: 330px;
+				height: 600px;
+			}
+
+			.outer_circle {
+				width: 56px;
+				height: 56px;
+				border: 0.065rem solid lightgrey;
+				border-radius: 100px;
+
+				background-color: white;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+
+				.inner_circle {
+					width: 25px;
+					height: 25px;
+					border: 0.065rem solid lightgrey;
+					border-radius: 100px;
+					background-color: map-get($colors, lightFontColor);
+				}
+			}
+
+			.pricing_box {
+				width: 78vw;
+				height: 430px;
+				margin-top: 40px;
+				border: 0.065rem solid lightgrey;
+				background-color: white;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 
 				@media (min-width: 448px) {
 					width: 330px;
 					height: 500px;
 				}
 
-
-			.plan_name {
-				font-size: 1.25rem;
-				padding: 30px 0 15px 0;
-				color: map-get($colors, mainColor);
-				font-weight: 400;
-				font-stretch: ultra-condensed;
-			}
-
-			.price_circle {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				align-items: center;
-				font-weight: 500;
-				font-size: 2.5rem;
-				letter-spacing: 0.06rem;
-				color: map-get($colors, lightFontColor);
-				border-radius: 100px;
-				width: 130px;
-				height: 130px;
-				background-color: white;
-				border: 0.065rem solid lightgrey;
-				font-stretch: ultra-condensed;
-				margin: 10px 0;
-				font-size: 2rem;
-
-.price {
-	display: flex;
-	flex-direction: row;
-	height: 37px;
-
-	.main_price {
-		font-size: 2.5rem;
-		font-weight: 600;
-	}
-				.price_sup {
-					font-size: 0.9rem;
-					align-self: flex-start;
-				}
-			}
-
-				.currency {
-					font-size: 0.8rem;
-					font-stretch: ultra-condensed;
-					margin-top: 14px;
-				}
-			}
-
-			.features_list {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				font-size: 1.2rem;
-				font-weight: 100;
-				color: map-get($colors, darkFontColor);
-
-				.dark_row {
-					display: flex;
-					justify-content: center;
-					background-color: map-get($colors, pricingFeaturesDarkBackground);
-					padding: 1.2vh;
-					width: 77.5vw;
-
-					@media (min-width: 448px) {
-						width: 328px;
-					}
-				}
-
-				.light_row {
-					display: flex;
-					justify-content: center;
-					background-color: map-get($colors, pricingFeaturesLightBackground);
-					padding: 1.2vh;
-					width: 77.5vw;
-
-					@media (min-width: 448px) {
-						width: 328px;
-					}
-				}
-			}
-
-			.join_button_box {
-				display: flex;
-				flex-grow: 2;
-
-				.join_button {
-					display: flex;
-					align-self: flex-end;
-					align-items: center;
-					justify-content: center;
-					width: 130px;
-					height: 38px;
-					margin: 15px;
-					border-radius: 0.55rem;
-					font-size: 1rem;
-				}
-			}
-		}
-	}
-
-
-// Pricing boxes color changes - hover START
-.pricing_box_hover {
-	.pricing_box_container {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		width: 78vw;
-		height: 550px;
-		margin: 10px 13px 0 13px;
-
-@media (min-width: 448px) {
-	width: 330px;
-
-}
-
-@media (min-width: 1025px) {
-	width: 330px;
-height: 600px;
-}
-
-
-		.outer_circle {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 56px;
-			height: 56px;
-			border-radius: 100px;
-			position: absolute;
-
-			//color change START
-			background-color: map-get($colors, mainColor);
-			border: map-get($colors, mainColor);
-			// color change END
-
-			.inner_circle {
-				width: 25px;
-				height: 25px;
-				border: 0.065rem solid lightgrey;
-				border-radius: 100px;
-
-				//color change START
-				background-color: white;
-				// color change END
-			}
-		}
-
-		.pricing_box {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
-			width: 78vw;
-			height: 430px;
-			margin-top: 40px;
-
-
-			// color change START
-			border: map-get($colors, mainColor);
-			background-color: map-get($colors, mainColor);
-			// color change END
-
-
-				@media (min-width: 448px) {
-					width: 330px;
-					height: 500px;
-				}
-
-
-			.plan_name {
-				font-size: 1.25rem;
-				padding: 30px 0 15px 0;
-
-				font-weight: 400;
-				font-stretch: ultra-condensed;
-
-				// color change START
-				color: white;
-				// color change END
-			}
-
-			.price_circle {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				align-items: center;
-				font-weight: 500;
-				font-size: 2.5rem;
-				letter-spacing: 0.06rem;
-				border-radius: 100px;
-				width: 130px;
-				height: 130px;
-				color: map-get($colors, lightFontColor);
-				background-color: white;
-				font-stretch: ultra-condensed;
-				margin: 10px 0;
-				font-size: 2rem;
-
-				// color change START
-				border: white;
-				// color change END
-
-.price {
-	display: flex;
-	flex-direction: row;
-	height: 37px;
-
-	.main_price {
-		font-size: 2.5rem;
-		font-weight: 600;
-	}
-				.price_sup {
-					font-size: 0.9rem;
-					align-self: flex-start;
-				}
-			}
-
-				.currency {
-					font-size: 0.8rem;
-					font-stretch: ultra-condensed;
-					margin-top: 14px;
-				}
-			}
-
-			.features_list {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				font-size: 1.2rem;
-				font-weight: 100;
-				color: map-get($colors, darkFontColor);
-
-				.dark_row {
-					display: flex;
-					justify-content: center;
-					padding: 1.2vh;
-					width: 77.5vw;
-
-					// color change START
-					background-color: map-get($colors, pricingFeaturesLightBackground);
-					// color change END
-
-					@media (min-width: 448px) {
-						width: 328px;
-					}
-				}
-
-				.light_row {
-					display: flex;
-					justify-content: center;
-
-					padding: 1.2vh;
-					width: 77.5vw;
-
-					// color change START
-					background-color: map-get($colors, pricingFeaturesDarkBackground);
-					// color change END
-
-					@media (min-width: 448px) {
-						width: 328px;
-					}
-				}
-			}
-
-			.join_button_box {
-				display: flex;
-				flex-grow: 2;
-
-				.join_button {
-					display: flex;
-					align-self: flex-end;
-					align-items: center;
-					justify-content: center;
-					width: 130px;
-					height: 38px;
-					margin: 15px;
-					border-radius: 0.55rem;
-					font-size: 1rem;
-
-					// color change START
-					background-color: white;
+				.plan_name {
+					font-size: 1.25rem;
+					padding: 30px 0 15px;
 					color: map-get($colors, mainColor);
-					// color change END
+					font-weight: 400;
+					font-stretch: ultra-condensed;
+				}
+
+				.price_circle {
+					font-weight: 500;
+					font-size: 2.5rem;
+					letter-spacing: 0.06rem;
+					color: map-get($colors, lightFontColor);
+					border-radius: 100px;
+					width: 130px;
+					height: 130px;
+					background-color: white;
+					border: 0.065rem solid lightgrey;
+					font-stretch: ultra-condensed;
+					margin: 10px 0;
+					font-size: 2rem;
+
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					align-items: center;
+
+					.price {
+						height: 37px;
+
+						display: flex;
+						flex-direction: row;
+
+						.main_price {
+							font-size: 2.5rem;
+							font-weight: 600;
+						}
+
+						.price_sup {
+							font-size: 0.9rem;
+
+							align-self: flex-start;
+						}
+					}
+
+					.currency {
+						font-size: 0.8rem;
+						font-stretch: ultra-condensed;
+						margin-top: 14px;
+					}
+				}
+
+				.features_list {
+					font-size: 1.2rem;
+					font-weight: 100;
+					color: map-get($colors, darkFontColor);
+
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+
+					.dark_row {
+						background-color: map-get($colors, pricingFeaturesDarkBackground);
+						padding: 1.2vh;
+						width: 77.5vw;
+
+						display: flex;
+						justify-content: center;
+
+						@media (min-width: 448px) {
+							width: 328px;
+						}
+					}
+
+					.light_row {
+						background-color: map-get($colors, pricingFeaturesLightBackground);
+						padding: 1.2vh;
+						width: 77.5vw;
+
+						display: flex;
+						justify-content: center;
+
+						@media (min-width: 448px) {
+							width: 328px;
+						}
+					}
+				}
+
+				.join_button_box {
+
+					display: flex;
+					flex-grow: 2;
+
+					.join_button {
+						width: 130px;
+						height: 38px;
+						margin: 15px;
+						border-radius: 0.55rem;
+						font-size: 1rem;
+
+						display: flex;
+						align-self: flex-end;
+						align-items: center;
+						justify-content: center;
+					}
 				}
 			}
 		}
+
+		// Pricing boxes color changes - hover START
+		.pricing_box_hover {
+
+			.pricing_box_container {
+				width: 78vw;
+				height: 550px;
+				margin: 10px 13px 0;
+
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+
+				@media (min-width: 448px) {
+					width: 330px;
+				}
+				@media (min-width: 1025px) {
+					width: 330px;
+					height: 600px;
+				}
+
+				.outer_circle {
+					width: 56px;
+					height: 56px;
+					border-radius: 100px;
+
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					//color change START
+					background-color: map-get($colors, mainColor);
+					border: map-get($colors, mainColor);
+					// color change END
+
+					.inner_circle {
+						width: 25px;
+						height: 25px;
+						border: 0.065rem solid lightgrey;
+						border-radius: 100px;
+
+						//color change START
+						background-color: white;
+						// color change END
+					}
+				}
+
+				.pricing_box {
+					width: 78vw;
+					height: 430px;
+					margin-top: 40px;
+
+					// color change START
+					border: map-get($colors, mainColor);
+					background-color: map-get($colors, mainColor);
+					// color change END
+
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					@media (min-width: 448px) {
+						width: 330px;
+						height: 500px;
+					}
+
+					.plan_name {
+						font-size: 1.25rem;
+						padding: 30px 0 15px;
+						font-weight: 400;
+						font-stretch: ultra-condensed;
+
+						// color change START
+						color: white;
+						// color change END
+					}
+
+					.price_circle {
+						font-weight: 500;
+						font-size: 2.5rem;
+						letter-spacing: 0.06rem;
+						border-radius: 100px;
+						width: 130px;
+						height: 130px;
+						color: map-get($colors, lightFontColor);
+						background-color: white;
+						font-stretch: ultra-condensed;
+						margin: 10px 0;
+						font-size: 2rem;
+
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+						align-items: center;
+
+						// color change START
+						border: white;
+						// color change END
+
+						.price {
+							height: 37px;
+
+							display: flex;
+							flex-direction: row;
+
+							.main_price {
+								font-size: 2.5rem;
+								font-weight: 600;
+							}
+
+							.price_sup {
+								font-size: 0.9rem;
+								align-self: flex-start;
+							}
+						}
+
+						.currency {
+							font-size: 0.8rem;
+							font-stretch: ultra-condensed;
+							margin-top: 14px;
+						}
+					}
+
+					.features_list {
+						font-size: 1.2rem;
+						font-weight: 100;
+						color: map-get($colors, darkFontColor);
+
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+
+						.dark_row {
+							padding: 1.2vh;
+							width: 77.5vw;
+
+							// color change START
+							background-color: map-get($colors, pricingFeaturesLightBackground);
+							// color change END
+
+							display: flex;
+							justify-content: center;
+
+							@media (min-width: 448px) {
+								width: 328px;
+							}
+						}
+
+						.light_row {
+							padding: 1.2vh;
+							width: 77.5vw;
+
+							// color change START
+							background-color: map-get($colors, pricingFeaturesDarkBackground);
+							// color change END
+
+							display: flex;
+							justify-content: center;
+
+							@media (min-width: 448px) {
+								width: 328px;
+							}
+						}
+					}
+
+					.join_button_box {
+
+						display: flex;
+						flex-grow: 2;
+
+						.join_button {
+							width: 130px;
+							height: 38px;
+							margin: 15px;
+							border-radius: 0.55rem;
+							font-size: 1rem;
+
+							display: flex;
+							align-self: flex-end;
+							align-items: center;
+							justify-content: center;
+
+							// color change START
+							background-color: white;
+							color: map-get($colors, mainColor);
+							// color change END
+
+						}
+					}
+				}
+			}
+		}
+		//hover END
 	}
-}
-
-//hover END
-
-
-}
 }
 // Pricing boxes END
-// Contactform START
 
+// Contactform START
 ::placeholder {
 	color: map-get($colors, lightFontColor);
 }
 
 .contact_form_container {
+	margin-bottom: 4vh;
+
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 4vh;
 
 	form {
+
 		display: flex;
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
 
 		@media (min-width: 769px) and (max-width: 970px) {
+			width: 90vw;
+
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			width: 90vw;
 		}
 
 		@media (min-width: 971px) and (max-width: 1200px) {
+			margin: 0 5vw;
+			width: 86vw;
+
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-			margin: 0 5vw;
-			width: 86vw;
 		}
 
 		@media (min-width: 1201px) {
@@ -1016,14 +1004,12 @@ height: 600px;
 			width: 1050px;
 		}
 
-
-
 		.contact_form_left_column_for_rwd {
+
 			display: flex;
 			flex-direction: column;
 			align-content: center;
 			align-items: center;
-
 
 			@media (min-width: 769px) and (max-width: 1200px) {
 				flex-grow: 2;
@@ -1033,167 +1019,169 @@ height: 600px;
 				width: 68%;
 			}
 
-		.input {
-			padding-left: 2vw;
-			width: 78vw;
-			height: 6vh;
-			margin: 5px;
-			border: 0.01rem solid map-get($colors, mainColor);
-			font-size: 1.9rem;
-			font-family: Raleway, Helvetica, sans-serif;
-			color: map-get($colors, placeholderFontColor);
-			font-weight: 100;
-
-			@media (min-width: 769px) {
-				width: 100%;
-				padding-left: 10px;
-			}
-
-			@media (max-width: 767px) and (orientation: landscape) {
-				height: 15vh;
-			}
-		}
-
-		.textarea {
-			height: 23vh;
-			padding-top: 1.65vh;
-			color: map-get($colors, placeholderFontColor);
-			font-weight: 100;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			resize: none;
-
-			@media  (max-width: 767px) and (orientation: landscape) {
-				height: 40vh;
-			}
-		}
-	}
-
-.contact_form_right_column_for_rwd {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	align-items: center;
-
-	@media (min-width: 769px) and (max-width: 1200px) {
-		width: 37vw;
-	}
-
-	@media (min-width: 1201px) {
-		width: 30%;
-		margin-left: 35px;
-	}
-
-
-		img {
-			width: 250px;
-			height: 200px;
-			margin-right: 40px;
-		}
-		// Checkbox START
-		.agree_checkbox_container {
-			display: flex;
-			flex-direction: row-reverse;
-			align-items: center;
-			justify-content: center;
-			width: 300px;
-			height: 7vh;
-			margin: 1vh 0;
-
-			@media (max-width: 767px) and (orientation: landscape) {
-			 margin: 6vh;
-			}
-
-
-			.checkbox_text {
-				color: map-get($colors, lightFontColor);
-				margin: 0 1.5vw;
+			.input {
+				padding-left: 2vw;
+				width: 78vw;
+				height: 6vh;
+				margin: 5px;
+				border: 0.01rem solid map-get($colors, mainColor);
+				font-size: 1.9rem;
+				font-family: Raleway, Helvetica, sans-serif;
+				color: map-get($colors, placeholderFontColor);
 				font-weight: 100;
-				width: 220px;
-				font-size: 1rem;
+
+				@media (min-width: 769px) {
+					width: 100%;
+					padding-left: 10px;
+				}
+
+				@media (max-width: 767px) and (orientation: landscape) {
+					height: 15vh;
+				}
+			}
+
+			.textarea {
+				height: 23vh;
+				padding-top: 1.65vh;
+				color: map-get($colors, placeholderFontColor);
+				font-weight: 100;
+				resize: none;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				@media (max-width: 767px) and (orientation: landscape) {
+					height: 40vh;
+				}
 			}
 		}
 
-		.dwcheckbox {
-			display: none;
-		}
+		.contact_form_right_column_for_rwd {
 
-		.dwcheckbox + label {
-			width: 38px;
-			height: 36px;
-			background: url("../../images/form_ok_mobile.png") 0 0;
-			display: block;
-			cursor: pointer;
-			border: 0.05rem solid map-get($colors, mainColor);
-		}
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			align-items: center;
 
-		.dwcheckbox:checked + label {
-			background-position: 0 -31px;
-		}
+			@media (min-width: 769px) and (max-width: 1200px) {
+				width: 37vw;
+			}
 
-		.dwcheckbox + label:hover,
-		.dwcheckbox:checked + label:hover {
-			opacity: 0.8;
-		}
-		//Checkbox END
+			@media (min-width: 1201px) {
+				width: 30%;
+				margin-left: 35px;
+			}
 
-		.submit_button {
-			border-radius: 8px;
-			width: 300px;
-			height: 65px;
-			font-size: 1.85rem;
-			font-weight: 500;
+			img {
+				width: 250px;
+				height: 200px;
+				margin-right: 40px;
+			}
+
+			// Checkbox START
+			.agree_checkbox_container {
+				width: 300px;
+				height: 7vh;
+				margin: 1vh 0;
+
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				justify-content: center;
+
+				@media (max-width: 767px) and (orientation: landscape) {
+					margin: 6vh;
+				}
+
+				.checkbox_text {
+					color: map-get($colors, lightFontColor);
+					margin: 0 1.5vw;
+					font-weight: 100;
+					width: 220px;
+					font-size: 1rem;
+				}
+			}
+
+			.dwcheckbox {
+
+				display: none;
+			}
+
+			.dwcheckbox + label {
+				width: 38px;
+				height: 36px;
+				background: url("../../images/form_ok_mobile.png") 0 0;
+				cursor: pointer;
+				border: 0.05rem solid map-get($colors, mainColor);
+
+				display: block;
+			}
+
+			.dwcheckbox:checked + label {
+				background-position: 0 -31px;
+			}
+
+			.dwcheckbox + label:hover,
+			.dwcheckbox:checked + label:hover {
+				opacity: 0.8;
+			}
+			//Checkbox END
+			.submit_button {
+				border-radius: 8px;
+				width: 300px;
+				height: 65px;
+				font-size: 1.85rem;
+				font-weight: 500;
+			}
 		}
 	}
 }
-}
-
-
-
 // Contactform END
 
 // Footer START
 .footer {
+
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 
-
 	.footer_container {
-		display: flex;
-		flex-direction: column;
 		padding-bottom: 3vh;
 		width: 78vw;
 
+		display: flex;
+		flex-direction: column;
 
 		@media (min-width: 769px) and (max-width: 1200px) {
+			width: 86vw;
+
 			flex-direction: row-reverse;
 			justify-content: flex-end;
 			align-items: flex-end;
-			width: 86vw;
 		}
 
 		@media (min-width: 1201px) {
+			width: 1050px;
+
 			flex-direction: row-reverse;
 			justify-content: flex-end;
 			align-items: flex-end;
-			width: 1050px;
 		}
 
 		.footer_logos {
+			width: 78vw;
+
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-			width: 78vw;
-
 
 			@media (min-width: 769px) {
+
 				flex-grow: 2;
 				flex-direction: row-reverse;
 				justify-content: flex-start;
-
 			}
 
 			.footer_logo {
@@ -1216,17 +1204,11 @@ height: 600px;
 		.copy_text {
 			font-size: 0.8rem;
 			color: map-get($colors, darkFontColor);
-
-
 			@media (min-width: 769px) {
 				width: 60vw;
 				font-size: 0.9rem;
-
 			}
 		}
 	}
 }
-
-
-
 // Footer END
