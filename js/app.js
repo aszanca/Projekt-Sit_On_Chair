@@ -79,4 +79,22 @@
    // Pricing boxes color changes - hover END
 
 
+   // Dropdown for calculator START
+   var calculator_menu = document.querySelector(".drop_down_list").children;
+
+   for (var i = 0; i < calculator.length; i++) {
+     calculator_menu[i].addEventListener("mouseover", function() {
+       if (this.children.length > 0) {
+         this.children[1].style.display = "flex";
+       }
+     });
+
+     calculator_menu[i].addEventListener("mouseout", function() {
+       if (this.children.length > 0) {
+         this.children[1].style.display = "none";
+       }
+     });
+   }
+   // Dropdown for calculator END
+
  });

@@ -132,6 +132,8 @@ body {
 	justify-content: space-between;
 
 	.logo {
+margin-left: 2vh;
+
 		@media (min-width: 769px) {
 			margin-left: 11vh;
 		}
@@ -139,10 +141,12 @@ body {
 
 	.main_menu {
 		list-style-type: none;
+		margin-right: 2vh;
 
 		display: flex;
 		align-items: center;
 		align-content: center;
+		
 
 		@media (min-width: 769px) {
 			margin-right: 11vh;
